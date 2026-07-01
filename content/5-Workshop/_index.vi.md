@@ -12,7 +12,7 @@ pre: " <b> 5. </b> "
 
 Hệ thống máy chủ xử lý dữ liệu đóng vai trò cốt lõi trong việc quản lý trạng thái, đồng bộ dữ liệu thời gian thực và bảo mật thông tin người chơi. Đối với các dòng game có tần suất tương tác liên tục, việc tối ưu hóa hạ tầng để đạt độ trễ tối thiểu và khả năng chịu tải linh hoạt là yếu tố quyết định trải nghiệm người dùng.
 
-Trong đề tài này, chúng ta sẽ nghiên cứu cách thiết kế, cấu hình và triển khai một kiến trúc máy chủ toàn diện trên nền tảng điện toán đám mây đám mây AWS, kết hợp các giải pháp lưu trữ tối ưu nhằm đảm bảo an toàn dữ liệu và tối ưu hóa chi phí vận hành.
+Trong đề tài này, chúng ta sẽ nghiên cứu cách thiết kế, cấu hình và triển khai một kiến trúc máy chủ toàn diện trên nền tảng điện toán đám mây AWS, kết hợp các giải pháp lưu trữ tối ưu nhằm đảm bảo an toàn dữ liệu và tối ưu hóa chi phí vận hành.
 
 Hệ thống phân tách luồng dữ liệu và xử lý thành hai mô hình chiến lược tùy thuộc vào đặc thù luồng traffic:
 + **Cơ chế xử lý đồng bộ (Compute Layer)** - Sử dụng máy chủ trung gian phối hợp với hệ thống cân bằng tải để điều phối các truy vấn API dạng văn bản, hoặc chuyển dịch sang kiến trúc phi máy chủ để tự động co giãn theo lượng người chơi trong thời gian thực.
@@ -23,6 +23,5 @@ Hệ thống phân tách luồng dữ liệu và xử lý thành hai mô hình c
 1. [Tổng quan về kiến trúc hệ thống](5.1-architecture-overview/)
 2. [Khởi tạo Hạ tầng Cơ sở và Quản lý](5.2-vpc-security-setup/)
 3. [Xây dựng Cơ sở dữ liệu và Sao lưu](5.3-application-server-deploy/)
-4. [Cấu hình hệ quản trị cơ sở dữ liệu và lớp bộ nhớ đệm](5.4-database-cache-config/)
-5. [Tối ưu hóa chi phí và giám sát hệ thống bằng aws budgets](5.5-cost-monitoring/)
-6. [Thử nghiệm hiệu năng và dọn dẹp tài nguyên](5.6-testing-cleanup/)
+4. [Kiến trúc và luồng xử lý](5.4-architecture-overview/)
+5. [Khởi tạo Amazon API Gateway](5.5-API-Gateway/)

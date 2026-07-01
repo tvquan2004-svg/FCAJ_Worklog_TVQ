@@ -1,0 +1,199 @@
+---
+title: "Khởi tạo Amazon API Gateway"
+date: 2026-06-18
+weight: 5
+chapter: false
+pre: " <b> 5.5. </b> "
+---
+#### 5.5.1 Giới thiệu về API Gateway
+
+Amazon API Gateway giúp tạo, xuất bản, bảo trì, theo dõi và bảo vệ các API ở bất kỳ quy mô nào. Trong hệ thống API Gateway đóng vai trò là cửa ngõ tiếp nhận tất cả các request từ Client và định tuyến đến các hàm xử lý logic (Lambda).
+
+#### 5.5.2 Cấu hình AWS API GATEWAY
+
+* Cấu hình AWS credentials :
+
+```YAML
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=ap-southeast-1
+DB_HOST=
+DB_PORT=5432
+DB_USER=quan
+DB_NAME=postgres
+DB_SSL=true
+JWT_SECRET=
+```
+
+- RDS cluster `quan` (Aurora PostgreSQL 17) dùng IAM authentication:
+
+```sql
+-- Tạo user và cấp quyền
+CREATE USER quan;
+GRANT rds_iam TO quan;
+GRANT ALL ON SCHEMA public TO quan;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO quan;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO quan;
+```
+
+* Lambda IAM Role cần permission:
+
+```json
+{
+    "Effect": "Allow",
+    "Action": "rds-db:connect",
+    "Resource": "arn:aws:rds-db:ap-southeast-1:369837025779:dbuser:*/quan"
+}
+```
+
+* Code sinh IAM token (shared/src/config/database.ts):
+
+```typescript
+const signer = new Signer({
+    hostname: process.env.DB_HOST,
+    port: parseInt(process.env.DB_PORT || "5432"),
+    username: process.env.DB_USER,
+    region: process.env.AWS_REGION || "ap-southeast-1",
+});
+const password = await signer.getAuthToken();
+```
+
+* Khởi tạo serverless.yml cho các function lambda , ví dụ cấu hình cho function auth :
+
+```yaml
+service: gameapi-auth
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-southeast-1
+  environment:
+    DB_HOST: ${env:DB_HOST}
+    DB_PORT: ${env:DB_PORT}
+    DB_USER: ${env:DB_USER}
+    DB_NAME: ${env:DB_NAME}
+    DB_SSL: 'true'
+    USE_RDS_IAM_AUTH: 'true'
+    JWT_SECRET: ${env:JWT_SECRET}
+    JWT_ISSUER: ${env:JWT_ISSUER, 'ChroniclesBackend'}
+    JWT_AUDIENCE: ${env:JWT_AUDIENCE, 'ChroniclesClient'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - rds-db:connect
+      Resource: 'arn:aws:rds-db:ap-southeast-1:369837025779:dbuser:*/quan'
+
+functions:
+  api:
+    handler: src/lambda.handler
+    timeout: 30
+    memorySize: 512
+
+plugins:
+  - serverless-esbuild
+
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+    target: node20
+    packager: npm
+    sourcemap: false
+```
+
+* Deploy :
+
+```shell
+npm run build:shared
+
+cd services/lambda-auth && npx serverless@3 deploy
+cd services/lambda-economy && npx serverless@3 deploy
+cd services/lambda-inventory && npx serverless@3 deploy
+cd services/lambda-transaction && npx serverless@3 deploy
+cd services/lambda-progression-world && npx serverless@3 deploy
+cd services/lambda-loot-reward && npx serverless@3 deploy
+
+cd api-gateway && npx serverless@3 deploy
+```
+
+* Lambda functions after deploy:
+
+```
+gameapi-auth-dev-api              512MB  nodejs20.x
+gameapi-economy-dev-api           512MB  nodejs20.x
+gameapi-inventory-dev-api         512MB  nodejs20.x
+gameapi-loot-reward-dev-api       512MB  nodejs20.x
+gameapi-progression-world-dev-api  512MB  nodejs20.x
+gameapi-transaction-dev-api       512MB  nodejs20.x
+```
+
+#### 5.5.3 Test AWS API GATEWAY
+
+![1782929549653](image/_index.vi/1782929549653.png)
+
+<div align="center"><i>Hình 5.5.1: Test đăng ký user</i></div>
+
+![1782929612593](image/_index.vi/1782929612593.png)
+
+<div align="center"><i>Hình 5.5.2: Đăng nhập user.</i></div>
+
+
+![1782929937041](image/_index.vi/1782929937041.png)
+
+<div align="center"><i>Hình 5.5.3:Xem dashboard.</i></div>
+
+
+![1782930080859](image/_index.vi/1782930080859.png)
+
+<div align="center"><i>Hình 5.5.4:Xem số dư ví.</i></div>
+
+![1782930242619](image/_index.vi/1782930242619.png)
+
+<div align="center"><i>Hình 5.5.5:Thêm trang bị.</i></div>
+
+
+![1782930706552](image/_index.vi/1782930706552.png)
+
+<div align="center"><i>Hình 5.5.6: Lấy danh sách trang bị</i></div>
+
+![1782934606097](image/_index.vi/1782934606097.png)
+
+<div align="center"><i>Hình 5.5.7: Mua trang bị</i></div>
+
+![1782934704570](image/_index.vi/1782934704570.png)
+
+<div align="center"><i>Hình 5.5.8: Đồng bộ inventory khi muua trang bị</i></div>
+
+#### 5.5.4 Kết Quả
+
+**Lambda Auth**
+
+POST /Accounts/Create → 201 Created: Tạo tài khoản người dùng thành công.
+
+POST /Accounts/Login → 200 OK: Đăng nhập và xác thực người dùng thành công.
+
+**Lambda Economy**
+
+GET /Economy/balance → 200 OK: Truy xuất số dư của người chơi thành công.
+
+**Lambda Inventory**
+
+GET /Inventory/sync → 200 OK: Đồng bộ dữ liệu kho đồ của người chơi thành công.
+
+**Lambda Transaction**
+
+GET /Shop/items → 200 OK: Lấy danh sách vật phẩm trong cửa hàng thành công.
+
+**Lambda Progression World**
+
+GET /PlayerStats/profile → 200 OK: Truy xuất thông tin hồ sơ và tiến trình phát triển của người chơi thành công.
+
+**Lambda Loot Reward**
+
+GET /Leaderboard → 200 OK: Lấy dữ liệu bảng xếp hạng thành công.
+
+GET /GameData/ping → 200 OK: Kiểm tra trạng thái hoạt động của dịch vụ thành công.
+
+
