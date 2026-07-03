@@ -5,7 +5,27 @@ weight : 7
 chapter : false
 pre : " <b> 5.7. </b> "
 ---
-#### 5.7.1 Các Module trong Compute Async
+Compute Async (Asynchronous Computing) là mô hình xử lý bất đồng bộ, trong đó request không cần chờ tác vụ hoàn thành ngay lập tức. Thay vì Lambda xử lý trực tiếp và trả kết quả ngay, request sẽ được đưa vào Amazon SQS. Lambda Consumer sẽ đọc Queue và xử lý sau.
+
+Ví dụ :
+
+* Cập nhật tiến trình game
+* Gửi email
+* Xử lý ảnh
+* Leaderboard
+* Farm
+* Reward
+* Log
+
+#### 5.7.1 Kiến trúc Compute Async của hệ thống
+
+![1783094529501](image/_index.vi/1783094529501.png)
+
+<div align="center"><i>Hình 5.5.1: Kiến trúc Compute Async</i></div>
+
+Client → API Gateway → Producer Lambda → Amazon SQS FIFO → Consumer Lambda → Amazon Aurora/RDS. Producer Lambda chỉ tiếp nhận và đưa yêu cầu vào Queue, còn Consumer Lambda xử lý nghiệp vụ và cập nhật dữ liệu bất đồng bộ, giúp hệ thống phản hồi nhanh và hoạt động ổn định hơn.
+
+#### 5.7.2 Các Module trong Compute Async
 
 **lambda-progression-world** — Chỉ số nhân vật & Farm (Core Service):
 
@@ -97,76 +117,3 @@ public static async saveData(req: Request, res: Response): Promise<void> {
 ```
 
 Nếu đã có save data thì cập nhật, nếu chưa thì tạo mới. Dữ liệu được lưu dưới dạng JSON string.
-
-#### 5.7.2 Database Access Pattern
-
-##### Progression — UPDATE level + exp
-
-```typescript
-stats.exp += amount;
-while (true) {
-    const expToNext = GameLogicValidator.getExpToNextLevel(stats.level);
-    if (stats.exp >= expToNext) {
-        stats.exp -= expToNext;
-        stats.level++;
-        stats.potentialPoints += 5;
-    } else break;
-}
-await ApplicationDbContext.getRepository(UserStat).save(stats);
-```
-
-Cộng exp, kiểm tra và tự động level up (cộng 5 điểm tiềm năng mỗi level), save stats.
-
-##### Farm — INSERT/REMOVE plots hàng loạt
-
-```typescript
-const plotsToRemove = plots.filter(p => elapsed >= config.growthTime);
-await farmRepo.remove(plotsToRemove);
-for (const [itemId, qty] of Object.entries(harvestedItems)) {
-    await callService(API_GATEWAY_URL, '/Inventory/add', { itemId, quantity: qty }, token);
-}
-```
-
-Lọc các plots đã đủ thời gian thu hoạch, xóa hàng loạt, gọi Inventory/add qua cross-service API.
-
-##### Leaderboard — SELECT + tính toán
-
-```typescript
-const allStats = await repo.find({ order: { level: 'DESC' }, take: 100 });
-const leaderboard = allStats.map((stat, index) => ({
-    rank: index + 1,
-    accountId: stat.accountId,
-    level: stat.level,
-    exp: stat.exp,
-}));
-```
-
-Sắp xếp top 100 người chơi theo level giảm dần, trả về kèm rank.
-
-#### 5.7.3 API Gateway Routing
-
-Các route đã được định nghĩa trong `api-gateway/serverless.yml`:
-
-| Path pattern                  | Lambda đích                         |
-| ----------------------------- | ------------------------------------- |
-| `ANY /PlayerStats/{proxy+}` | `gameapi-progression-world-dev-api` |
-| `ANY /Farm/{proxy+}`        | `gameapi-progression-world-dev-api` |
-| `ANY /Leaderboard/{proxy+}` | `gameapi-loot-reward-dev-api`       |
-| `ANY /Forum/{proxy+}`       | `gameapi-loot-reward-dev-api`       |
-| `ANY /GameData/{proxy+}`    | `gameapi-loot-reward-dev-api`       |
-| `ANY /SaveData/{proxy+}`    | `gameapi-loot-reward-dev-api`       |
-
----
-
-#### 5.7.4 Deploy
-
-```bash
-# Deploy song song cả 2 service
-deploy_service "progression-world" &
-deploy_service "loot-reward" &
-wait
-```
-
-Deploy cả 2 service song song. API Gateway route đã được định nghĩa sẵn trong `api-gateway/serverless.yml`.
-
----
