@@ -33,7 +33,7 @@ ví dụ với luồng xử lí POST /Economy/earn :
 
 #### 5.7.3 Setup SQS FIFO
 
-##### * Tạo FIFO Queue + DLQ
+##### * Tạo FIFO Queue 
 
 Định nghĩa queue trong services/sqs-infrastructure/serverless.yml:
 
@@ -49,16 +49,7 @@ EconomyQueue:
     RedrivePolicy:
       deadLetterTargetArn: !GetAtt EconomyDLQ.Arn
       maxReceiveCount: 3               # Retry 3 lần rồi chuyển DLQ
-
-EconomyDLQ:
-  Type: AWS::SQS::Queue
-  Properties:
-    QueueName: game-economy-dlq.fifo
-    FifoQueue: true
-    MessageRetentionPeriod: 1209600    # 14 ngày
 ```
-
-Làm tương tự cho Inventory, GiftCode, Stats, SaveData. Mỗi queue export QueueUrl và QueueArn qua CloudFormation Outputs để các stack khác import.
 
 ##### * Khởi tạo SQS Consumer Lambda
 
@@ -191,7 +182,7 @@ Handler pattern (services/sqs-consumer-economy/src/lambda.ts):
 
 ```typescript
 export const handler = async (event: SQSEvent): Promise<SQSBatchResponse> => {
-  if (!initialized) {                
+  if (!initialized) {              
     await initializeApplicationDbContext();
     initialized = true;
   }
@@ -199,7 +190,7 @@ export const handler = async (event: SQSEvent): Promise<SQSBatchResponse> => {
   for (const record of event.Records) {
     try {
       const message: SQSMessage = JSON.parse(record.body);
-      switch (message.type) {        
+      switch (message.type) {      
         case 'economy.earn':
           await handleEarnCurrency(message.payload);
           break;
@@ -238,11 +229,12 @@ serverless deploy --stage dev
 Stack tên gameapi-sqs-infrastructure-dev, sẽ tạo:
 
 - 5 FIFO queues (game-economy.fifo, game-inventory.fifo, game-giftcode.fifo, game-stats.fifo, game-save-data.fifo)
-- 5 DLQs tương ứng
 
 ![1783403865434](image/_index.vi/1783403865434.png)
 
 <div align="center"><i>Hình 5.7.4: Deploy SQS thành công.</i></div>
+
+chú thích : các file dlq có trong queues sẽ được hướng dẫn setup và deploy ở phần 5.8 AWS SQS Dead Letter Queue
 
 ##### * Deploy consumer sqs
 
@@ -310,12 +302,9 @@ SequenceNumber tăng dần theo thứ tự xử lý từ nhỏ nhất tới lớ
 
 Message amount=20 → 18903297315744239872
 
-
 Message amount=30 → 18903297315816687872
 
-
 Message amount=40 → 18903297315898607872
-
 
 Message amount=50 → 18903297315972591616
 
