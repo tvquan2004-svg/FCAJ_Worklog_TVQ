@@ -5,105 +5,130 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
+## AWS Serverless Solution for This Project: Game Backend API
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### 2.1 Executive Summary
 
-In this section, you need to summarize the workshop contents you **plan** to do.
+The Game Backend API project is for a 2D RPG game with a Node.js + TypeScript + Express 5 backend and PostgreSQL/Aurora RDS database. The AWS Serverless solution migrates from a monolith to **microservices serverless** with 6 Lambda APIs + 5 SQS Consumers + 1 Maintenance Lambda, reducing costs, improving scalability, and enabling flexible deployment.
 
-# IoT Weather Platform for Lab Research
-## Unified AWS Serverless Solution for Real-time Weather Monitoring
+### 2.2 Problem Statement
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the *ITea Lab* group in Ho Chi Minh City to enhance weather data collection and analysis capabilities. The platform supports up to 5 weather stations, scalable to 10–15 stations, using Raspberry Pi edge devices with ESP32 sensors communicating via MQTT. The platform leverages AWS Serverless services to provide real-time monitoring, predictive analytics, and cost savings, with limited access for 5 lab members through Amazon Cognito.
+**Operational Cost:**
+The current monolith architecture runs on a server 24/7, even when no players are active. This wastes significant compute resources. The server must be provisioned for peak load but runs idle during off-peak hours, leading to suboptimal operational costs.
 
-### 2. Problem Statement
-*Current Problem*
-Current weather stations require manual data collection, making management difficult with multiple stations. There is no centralized system for data or real-time analytics, and third-party platforms are often expensive and overly complex.
+**Scalability:**
+When the number of players spikes (game events, ads, holiday seasons), the monolith cannot scale individual parts independently. For example, only Auth or Economy features are overloaded, but the entire system must be scaled. This is both expensive and inefficient. The monolith architecture also does not support flexible auto-scaling per domain.
 
-*Solution*
-The platform uses AWS IoT Core for MQTT data ingestion, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including data lake), and AWS Glue Crawlers with ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analytics. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, but this platform operates at a smaller scale for internal use. Key features include real-time dashboards, trend analysis, and low operational costs.
+**Deployment and Maintenance:**
+Every feature update or bug fix requires redeploying the entire application. A minor bug in the Auth module can bring down the whole game. CI/CD pipelines are more complex and deployment takes longer due to rebuilding and restarting the entire system. Independent rollback per feature is not possible.
 
-*Benefits and ROI*
-The solution creates a foundational platform for lab members to develop a larger IoT platform, while providing data sources for AI researchers for model training or analysis. The platform reduces manual reporting for each station through a centralized system, simplifies management and maintenance, and improves data reliability. Estimated monthly cost is 0.66 USD (per AWS Pricing Calculator), totaling 7.92 USD for 12 months. All IoT devices are already equipped from the existing weather station system, with no additional development costs. ROI period is 6–12 months due to significant manual operation time savings.
+**Async Processing:**
+Critical tasks like currency updates (earn/spend), inventory changes (add/remove item), gift code redemption, and save data persistence are currently handled synchronously within the request-response cycle. If the server crashes mid-operation, data may be lost or become inconsistent. There is no retry mechanism or queue to guarantee successful processing.
 
-### 3. Solution Architecture
-The platform adopts an AWS Serverless architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15 stations. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs for transformation and loading into another S3 bucket for analytics. Lambda and API Gateway handle additional processing, while Amplify with Next.js provides a dashboard secured by Cognito.
+**Backup and Disaster Recovery:**
+Game data — accounts, currency, inventory, save data — is the most valuable asset. There is currently no automated backup strategy or clear disaster recovery (DR) plan. If the database encounters issues (disk failure, replication errors, attacks), player data could be permanently lost.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### 2.3 Solution Architecture
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![1783961736805](image/_index.vi/1783961736805.png)
 
-*AWS Services Used*
-- *AWS IoT Core*: Ingests MQTT data from 5 stations, scalable to 15.
-- *AWS Lambda*: Processes data and triggers Glue jobs (2 functions).
-- *Amazon API Gateway*: Communicates with the web application.
-- *Amazon S3*: Stores raw data (data lake) and processed data (2 buckets).
-- *AWS Glue*: Crawlers index data, ETL jobs transform and load data.
-- *AWS Amplify*: Hosts the Next.js web interface.
-- *Amazon Cognito*: Manages access for lab users.
+**Data Flow Overview:**
 
-*Component Design*
-- *Edge Devices*: Raspberry Pi collects and filters sensor data, sends to IoT Core.
-- *Data Ingestion*: AWS IoT Core receives MQTT messages from edge devices.
-- *Data Storage*: Raw data stored in S3 data lake; processed data in another S3 bucket.
-- *Data Processing*: AWS Glue Crawlers index data; ETL jobs transform for analytics.
-- *Web Interface*: AWS Amplify hosts Next.js application for dashboards and real-time analytics.
-- *User Management*: Amazon Cognito limits to 5 active accounts.
+Client (game app) sends requests through API Gateway, which routes to the corresponding Lambda per domain. Lambda APIs handle business logic and write data to Aurora RDS PostgreSQL. For critical tasks requiring data integrity (earn/spend currency, add/remove item, redeem gift code, distribute stats, upload save data), Lambda APIs send messages to SQS FIFO queues. SQS Consumer Lambdas process messages from queues and write to the database, ensuring async processing with retry capability.
 
-### 4. Technical Implementation
-*Deployment Phases*
-The project consists of 2 parts — setting up the edge weather station and building the weather platform — each going through 4 phases:
-1. *Research and Architecture Design*: Research Raspberry Pi with ESP32 sensors and design AWS Serverless architecture (1 month before internship).
-2. *Cost Estimation and Feasibility Check*: Use AWS Pricing Calculator for estimation and adjustment (Month 1).
-3. *Architecture Optimization for Cost/Solution*: Fine-tune (e.g., optimize Lambda with Next.js) to ensure efficiency (Month 2).
-4. *Development, Testing, Deployment*: Program Raspberry Pi, AWS services with CDK/SDK and Next.js application, then test and launch (Month 2–3).
+**Component Details:**
 
-*Technical Requirements*
-- *Edge Weather Station*: Sensors (temperature, humidity, rainfall, wind speed), ESP32 microcontroller, Raspberry Pi as edge device. Raspberry Pi runs Raspbian, uses Docker for data filtering and sends 1 MB/day/station via MQTT over Wi-Fi.
-- *Weather Platform*: Practical knowledge of AWS Amplify (Next.js hosting), Lambda (minimized due to Next.js handling), AWS Glue (ETL), S3 (2 buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK for programming (e.g., IoT Core rules to S3). Next.js helps reduce Lambda load for the fullstack web application.
+API Gateway serves as the single entry point receiving client requests, handling authentication (JWT), rate limiting, and routing to the correct Lambda. 6 Lambda APIs are deployed independently, each wrapping an Express app with `@vendia/serverless-express`, running on Node.js 20, handling a specific game domain. These Lambdas scale independently based on request volume per domain.
 
-### 5. Roadmap & Milestones
-- *Pre-internship (Month 0)*: 1 month planning and evaluating old station.
-- *Internship (Month 1–3)*:
-    - Month 1: Learn AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Deploy, test, launch.
-- *Post-deployment*: Further research for up to 1 year.
+5 SQS FIFO queues ensure messages are processed in order (FIFO) and not lost. Each queue has its own DLQ (Dead Letter Queue) to collect failed messages after 3 retries, with CloudWatch alarms for timely alerts. SQS Consumer Lambdas process messages in batches (max 10 messages/batch) with partial failure handling (SGDBatchResponse).
 
-### 6. Budget Estimation
-View costs on [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)
-Or download the [budget estimation file](../attachments/budget_estimation.pdf).
+Aurora RDS Serverless v2 PostgreSQL is the primary database, auto-scaling ACUs based on load, supporting IAM authentication for security. TypeORM auto-creates/updates schemas on startup (synchronize: true). There are 18 entities divided into 5 domains (User, Forum, GiftCode, Game, System).
 
-*Infrastructure Costs*
-- AWS Lambda: 0.00 USD/month (1,000 requests, 512 MB storage).
-- S3 Standard: 0.15 USD/month (6 GB, 2,100 requests, 1 GB scan).
-- Data Transfer: 0.02 USD/month (1 GB in, 1 GB out).
-- AWS Amplify: 0.35 USD/month (256 MB, 500 ms request).
-- Amazon API Gateway: 0.01 USD/month (2,000 requests).
-- AWS Glue ETL Jobs: 0.02 USD/month (2 DPU).
-- AWS Glue Crawlers: 0.07 USD/month (1 crawler).
-- MQTT (IoT Core): 0.08 USD/month (5 devices, 45,000 messages).
+EventBridge acts as a scheduler with 4 rules: enable maintenance mode (Monday 10:00 UTC), disable maintenance mode (Monday 12:00 UTC), vacuum analyze and reindex all tables (3:00 AM daily), daily reset (midnight — reset stamina, clean expired codes, logs, stale data). The Maintenance Lambda receives events from EventBridge and executes corresponding tasks.
 
-*Total*: 0.7 USD/month, 8.40 USD/12 months
-- *Hardware*: 265 USD one-time (Raspberry Pi 5 and sensors).
+AWS Backup handles automatic daily database backups (5:00 UTC, 14-day retention) and weekly backups (Sunday 5:00 UTC, 56-day retention).
 
-### 7. Risk Assessment
-*Risk Matrix*
-- Network outage: Medium impact, medium probability.
-- Sensor failure: High impact, low probability.
-- Budget overrun: Medium impact, low probability.
+Shared code is packaged via npm workspace `@gameapi/shared`, including: 18 TypeORM entities, 3 middlewares (auth, admin, maintenance), SQS producer with 8 static methods, utilities (JwtHelper, PasswordHasher, TimeHelper, ItemGenerationHelper, logger), services (GiftCodeService, GameLogicValidator), and CloudWatch metrics helper.
 
-*Mitigation Strategies*
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Periodic checks, spare components.
-- Costs: AWS budget alerts, service optimization.
+### 2.4 Technical Implementation
 
-*Contingency Plan*
-- Revert to manual collection if AWS encounters issues.
-- Use CloudFormation to restore cost-related configurations.
+**6 Lambda APIs** divided by domain — Auth (register/login/dashboard), Economy (balance/earn/spend), Inventory (item CRUD + storage), Transaction (shop + gift code), Progression (stats + farming), Loot-Reward (leaderboard + forum + save data + game data).
 
-### 8. Expected Results
-*Technical Improvements*: Real-time data and analytics replacing manual processes. Scalable to 10–15 stations.
-*Long-term Value*: 1-year data platform for AI research, reusable for future projects.
+**5 SQS FIFO queues** — economy, inventory, giftcode, stats, save-data. Each queue has its own DLQ with CloudWatch alarm. Messages are processed asynchronously by corresponding consumer Lambdas.
+
+**Database** — Aurora RDS PostgreSQL with TypeORM (synchronize: true). 18 entities across 5 domains. Supports IAM authentication for production, password for local dev.
+
+**Security** — JWT for APIs, admin secret for admin endpoints, rate limiting, IAM authentication.
+
+**Shared code** — npm workspace `@gameapi/shared` containing models, middlewares, utils, SQS producer, shared services.
+
+**Maintenance** — 4 EventBridge rules: enable/disable maintenance (Monday), vacuum analyze (3:00 AM), daily reset (midnight).
+
+**Deployment** — Docker Compose for local dev, Serverless Framework + esbuild for AWS production.
+
+### 2.5 Roadmap
+
+Week 1-2: Survey and solution design.
+Week 3-4: Set up AWS infrastructure (RDS, API Gateway, SQS, EventBridge, IAM).
+Week 5-6: Implement Lambda Auth + Economy + corresponding consumers.
+Week 7-8: Implement Lambda Inventory + Transaction + corresponding consumers.
+Week 9-10: Implement Lambda Progression + Loot-Reward + corresponding consumers.
+Week 11: Implement Maintenance Lambda, backup, monitoring.
+Week 12: Integration testing, load testing, cutover, go-live.
+
+### 2.6 Budget Estimation
+
+Monthly AWS service costs (estimated for ~1000 players):
+
+- **AWS Lambda (12 functions):** $50-200/month — based on request count and execution time. 6 API Lambdas + 5 Consumer Lambdas + 1 Maintenance Lambda. 1 million requests/month free, then $0.20/million requests.
+- **API Gateway (REST API):** $30-100/month — based on request count. 1 million requests/month free for first 12 months.
+- **Aurora RDS Serverless v2 (PostgreSQL):** $50-150/month — based on ACU (Aurora Capacity Unit). Starts at 2 ACU, auto-scales.
+- **SQS FIFO (5 queues + 5 DLQs):** $5-15/month — FIFO $0.50/million requests, DLQ storage $0.023/GB/month.
+- **EventBridge (4 rules):** $5-10/month — $1/million events, 4 daily schedule rules.
+- **CloudWatch Logs + Metrics:** $10-30/month — Lambda logs, custom metrics, DLQ alarms.
+- **AWS Backup (daily + weekly):** $10-20/month — database backup storage + 14-56 day retention.
+
+**Total: $160-525/month.** For small scale under 1000 players, costs could be around ~$200/month.
+
+### 2.7 Risk Assessment
+
+**Lambda Cold Start:**
+When no requests come for an extended period, Lambda resources are reclaimed. The first subsequent request will be slow due to runtime initialization and database connection setup (cold start). Medium impact — players may experience slight lag on the first request. Mitigated by using Provisioned Concurrency for critical Lambdas (Auth and GameData) to keep execution environments warm.
+
+**FIFO Queue Throughput Limit:**
+SQS FIFO limits throughput to 3000 TPS — exceeding this causes message throttling. Low impact since for under 1000 concurrent players, this throughput is sufficient. For future expansion, more queues and account-based sharding can be added.
+
+**Data Loss or Duplicate Messages:**
+SQS FIFO guarantees exactly-once processing, but the consumer may crash after processing but before acknowledging, leading to duplicates. Low impact — handlers should be designed idempotent. DLQ with maxReceiveCount=3 ensures no messages are ever lost, and operations teams are alerted via CloudWatch alarm when DLQ has messages.
+
+**Database Connection Pool Exhaustion:**
+Each Lambda instance creates its own connection pool to the database. If many Lambda instances run concurrently, connections may exceed RDS limits. Medium-high impact. Mitigated by limiting pool size per Lambda (max 2-5 connections), using RDS Proxy for centralized connection pool management, and leveraging IAM authentication to avoid storing passwords.
+
+**Sudden AWS Cost Spikes:**
+When a game goes viral or has a major event, request spikes drive up Lambda, API Gateway, and database costs. High impact — could result in unexpected AWS bills. Mitigated by setting up AWS Budget Alerts at 3 thresholds (50%, 80%, 100%), API Gateway usage plans, rate limiting, and CloudWatch dashboard monitoring.
+
+**Lambda Timeout with Large Data:**
+Player save data can be very large (many items, plots, transaction history), causing Lambda timeout (default 30s, max 900s). Medium impact. Mitigated by increasing Lambda timeout appropriately, splitting save data into multiple parts, or handling heavy tasks async via SQS.
+
+**AWS Dependency:**
+The entire system runs on AWS — if AWS has a regional outage (ap-southeast-1), the game stops completely. High impact but low probability. Mitigated by multi-AZ RDS configuration, cross-region DR backup plan, and detailed recovery documentation.
+
+### 2.8 Expected Results
+
+**Reduced Operational Costs:**
+With Lambda pay-per-use, compute costs only incur when there are player requests. No more wasted resources from running a server 24/7. Expected 40-60% cost savings compared to a fixed-server monolith, especially during early stages with low player counts.
+
+**Flexible Scalability:**
+Each domain scales independently based on actual load. Auth Lambda can scale to 1000 instances while Inventory Lambda needs only 10. API Gateway auto-scales by request volume. Aurora Serverless v2 automatically adjusts ACUs based on database load. No more system-wide bottlenecks.
+
+**Fast and Safe Deployment:**
+Deploy each Lambda independently without affecting other domains. Deployment time drops from 10-15 minutes (monolith) to 1-2 minutes (per Lambda). Independent rollback if issues arise. Simpler CI/CD with Serverless Framework.
+
+**Reliable Async Processing:**
+FIFO queues guarantee ordered processing with no message loss. DLQ + CloudWatch alarm enables timely detection and handling of failed messages. Automatic retry up to 3 times. Idempotent handlers prevent duplicates caused by retries.
+
+**Production Ready:**
+AWS Backup automatic (daily + weekly) with clear retention policies. CloudWatch monitoring and alarms for all components (DLQ, Lambda errors, API Gateway 5xx, database connections). Multi-layer security: JWT, admin secret, rate limiting, IAM authentication. Maintenance mode for controlled maintenance without affecting data.
+
+**Smooth Migration:**
+Monolith can run in parallel during cutover. Domains can be migrated gradually from monolith to Lambda without stopping the game. Quick rollback by pointing API Gateway back to the monolith if issues are detected.
