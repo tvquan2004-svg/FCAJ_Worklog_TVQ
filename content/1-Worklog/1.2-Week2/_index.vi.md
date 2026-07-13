@@ -8,23 +8,21 @@ pre: " <b> 1.2. </b> "
 
 ### Mục tiêu tuần 2:
 
-* Tìm hiểu các dịch vụ AWS và các module miễn phí có thể ứng dụng trực tiếp vào đồ án.
-* Triển khai dự án thực tế trên máy ảo EC2 và cơ sở dữ liệu RDS.
+* Tìm hiểu các service AWS như EC2, RDS, Route 53, S3 để tìm ra service tối ưu cho dự án Backend Game API.
+* Khảo sát và thiết kế giải pháp kiến trúc tổng thể cho dự án.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2  | - Tìm hiểu các dịch vụ AWS và module miễn phí có thể ứng dụng vào đồ án: <br>&emsp; + EC2 (t3.micro) <br>&emsp; + RDS (db.t4g.micro) <br>&emsp; + Amazon Gamelift <br>&emsp; + ElastiCache (cache.t3.micro) | 11/05/2026 | 11/05/2026 |
-| 3 - 5 | - Khởi tạo tài nguyên cơ bản: <br>&emsp; + Tạo EC2 (t3.micro) với hệ điều hành Ubuntu Linux. <br>&emsp; + Tạo RDS (db.t4g.micro) chạy MySQL. <br>&emsp; + Thiết lập IP tĩnh cho server bằng Elastic IP. | 12/05/2026 | 14/05/2026 |
-| 6 - 7 | - Cấu hình và liên kết tài nguyên: <br>&emsp; + Liên kết db RDS đến EC2. <br>&emsp; + Thiết lập inbound rule (launch-wizard-x). <br>&emsp; + Tận dụng ổ cứng dư thừa để cắt làm RAM ảo. | 15/05/2026 | 16/05/2026 |
-| CN | - Deploy dự án: <br>&emsp; + Sử dụng pm2 để deploy ngay trên máy ảo EC2. <br>&emsp; + Mở cổng để máy khác có thể truy cập vào public IP. | 17/05/2026 | 17/05/2026 |
+| 2 | - Tìm hiểu dịch vụ Amazon EC2: các loại instance, AMI, EBS, Elastic IP, Security Groups. <br> - Tìm hiểu dịch vụ Amazon RDS: các loại database engine (MySQL, PostgreSQL, Aurora), lớp instance. | 12/05/2026 | 12/05/2026 | |
+| 3 | - Tìm hiểu Amazon Route 53: cách quản lý DNS, routing policies, hosted zones. <br> - Tìm hiểu Amazon S3: bucket, object storage, use cases cho game (asset storage, backup). | 13/05/2026 | 13/05/2026 | |
+| 4 - 5 | - So sánh và đánh giá các service AWS phù hợp cho dự án Backend Game API. <br> - Xác định kiến trúc tối ưu: kết hợp EC2 cho compute, RDS cho database, S3 cho asset storage. | 14/05/2026 | 15/05/2026 | |
+| 6 - CN | - Thiết kế giải pháp kiến trúc tổng thể cho dự án. <br> - Vẽ sơ đồ kiến trúc sơ bộ: <br> &emsp; + Client -> EC2 (Game Server) -> RDS (Database). <br> &emsp; + S3 cho lưu trữ asset tĩnh. <br> &emsp; + Route 53 cho quản lý tên miền. <br> - Trình bày và thảo luận giải pháp với nhóm. | 16/05/2026 | 17/05/2026 | |
 
 ### Kết quả đạt được tuần 2:
 
-* Nắm rõ và xác định được các dịch vụ/module AWS miễn phí phù hợp cho đồ án: EC2, RDS, Amazon Gamelift, ElastiCache.
-* Triển khai thành công máy ảo EC2 (Ubuntu Linux, t3.micro) và cơ sở dữ liệu RDS (MySQL, db.t4g.micro).
-* Đã thiết lập thành công IP tĩnh cho server thông qua Elastic IP.
-* Hoàn tất liên kết cơ sở dữ liệu RDS vào EC2 và cấu hình Inbound rule (launch-wizard-x) để cho phép kết nối.
-* Tối ưu hóa được máy ảo bằng cách tận dụng ổ cứng dư thừa làm RAM ảo.
-* Đã sử dụng pm2 để deploy dự án trực tiếp trên EC2 và mở cổng thành công, cho phép truy cập từ public IP.
+* Nắm rõ các service AWS cốt lõi: EC2, RDS, Route 53, S3 và cách chúng có thể ứng dụng vào dự án Backend Game API.
+* Đánh giá và chọn được các service tối ưu cho dự án dựa trên yêu cầu kỹ thuật và chi phí.
+* Hoàn thành khảo sát giải pháp và thiết kế sơ đồ kiến trúc sơ bộ cho hệ thống.
+* Xác định được luồng dữ liệu chính: Client request qua EC2 -> xử lý logic game -> lưu trữ trên RDS, asset tĩnh phục vụ từ S3.

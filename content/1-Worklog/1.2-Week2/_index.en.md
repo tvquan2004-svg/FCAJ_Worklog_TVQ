@@ -8,23 +8,21 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 Objectives:
 
-* Explore AWS services and free modules applicable to the project.
-* Deploy a real project on EC2 and RDS.
+* Explore AWS services such as EC2, RDS, Route 53, S3 to find the optimal services for the Backend Game API project.
+* Survey and design the overall architecture solution for the project.
 
 ### Weekly Tasks:
 
 | Day | Tasks | Start Date | End Date | Resources |
 | --- | --- | --- | --- | --- |
-| Mon | - Research AWS services and free modules applicable to the project: <br>&emsp; + EC2 (t3.micro) <br>&emsp; + RDS (db.t4g.micro) <br>&emsp; + Amazon Gamelift <br>&emsp; + ElastiCache (cache.t3.micro) | 11/05/2026 | 11/05/2026 |
-| Tue - Thu | - Initialize basic resources: <br>&emsp; + Create EC2 (t3.micro) with Ubuntu Linux. <br>&emsp; + Create RDS (db.t4g.micro) running MySQL. <br>&emsp; + Set up static IP for the server using Elastic IP. | 12/05/2026 | 14/05/2026 |
-| Fri - Sat | - Configure and link resources: <br>&emsp; + Link RDS to EC2. <br>&emsp; + Set up inbound rules (launch-wizard-x). <br>&emsp; + Utilize spare disk space for swap memory. | 15/05/2026 | 16/05/2026 |
-| Sun | - Deploy project: <br>&emsp; + Use pm2 to deploy directly on EC2. <br>&emsp; + Open ports for external access to the public IP. | 17/05/2026 | 17/05/2026 |
+| Tue | - Learn Amazon EC2: instance types, AMI, EBS, Elastic IP, Security Groups. <br> - Learn Amazon RDS: database engines (MySQL, PostgreSQL, Aurora), instance classes. | 12/05/2026 | 12/05/2026 | |
+| Wed | - Learn Amazon Route 53: DNS management, routing policies, hosted zones. <br> - Learn Amazon S3: bucket, object storage, use cases for games (asset storage, backup). | 13/05/2026 | 13/05/2026 | |
+| Thu - Fri | - Compare and evaluate AWS services suitable for the Backend Game API project. <br> - Determine the optimal architecture: combine EC2 for compute, RDS for database, S3 for asset storage. | 14/05/2026 | 15/05/2026 | |
+| Sat - Sun | - Design the overall architecture solution for the project. <br> - Draw preliminary architecture diagram: <br> &emsp; + Client -> EC2 (Game Server) -> RDS (Database). <br> &emsp; + S3 for static asset storage. <br> &emsp; + Route 53 for domain management. <br> - Present and discuss the solution with the team. | 16/05/2026 | 17/05/2026 | |
 
 ### Week 2 Results:
 
-* Clearly identified suitable free AWS services/modules for the project: EC2, RDS, Amazon Gamelift, ElastiCache.
-* Successfully deployed EC2 (Ubuntu Linux, t3.micro) and RDS (MySQL, db.t4g.micro).
-* Successfully set up a static IP for the server using Elastic IP.
-* Completed linking RDS to EC2 and configured inbound rules (launch-wizard-x) for connectivity.
-* Optimized the virtual machine by utilizing spare disk space as swap memory.
-* Used pm2 to deploy the project directly on EC2 and successfully opened ports for public IP access.
+* Mastered core AWS services: EC2, RDS, Route 53, S3 and how they apply to the Backend Game API project.
+* Evaluated and selected optimal services based on technical requirements and cost considerations.
+* Completed the solution survey and designed a preliminary architecture diagram for the system.
+* Identified the main data flow: Client request -> EC2 (game logic processing) -> RDS (data storage), with static assets served from S3.

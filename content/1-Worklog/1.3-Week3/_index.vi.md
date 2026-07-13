@@ -8,25 +8,24 @@ pre: " <b> 1.3. </b> "
 
 ### Mục tiêu tuần 3:
 
-* Thiết lập quản lý chi phí AWS và cấu hình bảo mật, phân quyền truy cập cơ bản.
-* Tìm hiểu và thực hành cấu hình mạng (VPC), DNS (Route53) và các công cụ quản lý qua CLI.
-* Ứng dụng tự động hóa trong việc quản lý tài nguyên (tự động bật/tắt EC2, RDS) và tìm hiểu dịch vụ AI mới của AWS.
+* Thiết lập IAM Policy và IAM Role để quản lý phân quyền truy cập tài nguyên AWS.
+* Tính toán chi phí vận hành dự án với AWS Pricing Calculator.
+* Thiết lập AWS Budgets: Cost Budget và Usage Budget để kiểm soát chi phí.
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Ghi chú |
 | --- | --- | --- | --- | --- |
-| 2 | - Thiết lập quản lý tài khoản và chi phí bằng AWS Budgets. <br> - Cài đặt 2 cảnh báo miễn phí: Actual 80% và Forecasted 100% trong ngân sách 10 USD. | 18/05/2026 | 18/05/2026 |
-| 3 | - Thiết lập Amazon VPC. <br> - Tạo và quản lý IAM User/Role để lấy AWS Access Key ID và AWS Secret Access Key. | 19/05/2026 | 19/05/2026 |
-| 4 - 5 | - Tìm hiểu và cấu hình AWS CLI trên môi trường Ubuntu EC2 thông qua IAM User. <br> - Tìm hiểu và thử triển khai dịch vụ Route53. | 20/05/2026 | 21/05/2026 | Quên tắt Route53 và bị trừ 20 đô |
-| 6 | - Tìm hiểu về dịch vụ AI của AWS: AWS Bedrock. | 22/05/2026 | 22/05/2026 |
-| 7 - CN | - Thiết lập tự động bật/tắt EC2 và RDS bằng cách sử dụng kết hợp Lambda Function và Amazon EventBridge. | 23/05/2026 | 24/05/2026 |
+| 2 | - Tìm hiểu về IAM (Identity and Access Management): <br> + Các thành phần: User, Group, Role, Policy. <br> + Phân biệt IAM User và IAM Role. <br> + Cấu trúc của một IAM Policy document (JSON). | 19/05/2026 | 19/05/2026 | |
+| 3 | - Thiết lập IAM Policy: <br> + Viết policy cho phép Lambda truy cập RDS, SQS, S3. <br> + Áp dụng nguyên tắc least privilege. <br> - Thiết lập IAM Role: <br> + Tạo role cho Lambda với các policy đã viết. <br> + Gán role cho Lambda function. | 20/05/2026 | 20/05/2026 | |
+| 4 | - Tính toán chi phí vận hành với AWS Pricing Calculator: <br> + Nhập thông số dự kiến: EC2, RDS, S3, Lambda, API Gateway. <br> + Ước tính chi phí hàng tháng. <br> + Lên kế hoạch tối ưu chi phí. | 21/05/2026 | 21/05/2026 | |
+| 5 | - Thiết lập AWS Budgets: <br> + Cost Budget: ngân sách chi phí hàng tháng. <br> + Usage Budget: giới hạn sử dụng tài nguyên. <br> + Cấu hình cảnh báo qua email khi vượt ngưỡng. | 22/05/2026 | 22/05/2026 | |
+| 6 - CN | - Kiểm tra và hoàn thiện: <br> + Review các IAM Policy đã tạo. <br> + Xác nhận budget hoạt động. <br> + Tài liệu hóa các policy và ngân sách cho nhóm. | 23/05/2026 | 24/05/2026 | |
 
 ### Kết quả đạt được tuần 3:
 
-* Đã cấu hình thành công công cụ cảnh báo chi phí AWS Budgets (ngưỡng 80% và 100% cho ngân sách 10$).
-* Thiết lập xong mạng Amazon VPC và phân quyền IAM, lấy thành công Access Key ID và Secret Access Key.
-* Cấu hình và sử dụng được AWS CLI trên môi trường máy ảo Ubuntu EC2.
-* Đã có kinh nghiệm thực tế triển khai Route53 (và rút ra bài học quản lý tài nguyên khi bị trừ 20$).
-* Nắm được tổng quan về dịch vụ AI AWS Bedrock.
-* Tối ưu hoá được chi phí bằng cách tự động hoá việc bật/tắt EC2 và RDS thông qua Lambda Function và Amazon EventBridge.
+* Hiểu rõ cách hoạt động của IAM và cấu trúc IAM Policy document.
+* Thiết lập thành công IAM Policy với nguyên tắc least privilege cho các service chính.
+* Tạo IAM Role cho Lambda với quyền truy cập cần thiết đến RDS, SQS và S3.
+* Hoàn thành tính toán chi phí vận hành dự án với AWS Pricing Calculator, giúp dự trù ngân sách chính xác.
+* Thiết lập AWS Budgets gồm Cost Budget và Usage Budget với cảnh báo qua email, đảm bảo kiểm soát chi phí hiệu quả.

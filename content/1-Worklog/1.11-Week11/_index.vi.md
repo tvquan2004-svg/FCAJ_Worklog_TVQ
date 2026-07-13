@@ -1,59 +1,35 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
+date: 2026-07-13
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng các hàm Lambda phục vụ chế độ bảo trì của hệ thống game.
+* Tách biệt chức năng thành các Lambda độc lập: Start Maintenance, Stop Maintenance, Vacuum & Analyze, Reset Daily.
+* Cấu hình EventBridge để tự động kích hoạt các Lambda theo lịch hoặc sự kiện.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Ghi chú |
+| --- | --- | --- | --- | --- |
+| 2 | - Thiết kế kiến trúc hệ thống bảo trì:<br>+ Xác định các chế độ bảo trì cần thiết.<br>+ Thiết kế luồng chuyển đổi trạng thái hệ thống (online -> maintenance -> online).<br>+ Xác định cơ chế khóa API khi bảo trì. | 14/07/2026 | 14/07/2026 | |
+| 3 | - Xây dựng Lambda Start Maintenance & Stop Maintenance:<br>+ Lambda Start Maintenance: cập nhật stageVariables API Gateway, chặn request mới, thông báo bảo trì.<br>+ Lambda Stop Maintenance: khôi phục stageVariables, cho phép request trở lại.<br>+ Tích hợp với API Gateway SDK để thay đổi trạng thái. | 15/07/2026 | 15/07/2026 | |
+| 4 | - Xây dựng Lambda Vacuum & Analyze:<br>+ Tự động chạy lệnh VACUUM để dọn dẹp dead tuples trong database.<br>+ Chạy ANALYZE để cập nhật statistics cho query planner.<br>+ Ghi log kết quả và thông báo hoàn thành. | 16/07/2026 | 16/07/2026 | |
+| 5 | - Xây dựng Lambda Reset Daily:<br>+ Xử lý reset các dữ liệu hàng ngày (nhiệm vụ, quà tặng, lượt chơi miễn phí...).<br>+ Đảm bảo tính nhất quán dữ liệu khi reset.<br>+ Ghi log và thông báo kết quả reset. | 17/07/2026 | 17/07/2026 | |
+| 6 - CN | - Cấu hình EventBridge và kiểm thử:<br>+ Tạo EventBridge rules cho từng Lambda với lịch schedule cụ thể.<br>+ Cấu hình CloudWatch Metric và log cho các maintenance tasks.<br>+ Kiểm thử toàn bộ luồng bảo trì tự động. | 18/07/2026 | 19/07/2026 | |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành thiết kế kiến trúc hệ thống bảo trì với các chế độ hoạt động rõ ràng.
+* Xây dựng thành công Lambda Start Maintenance và Stop Maintenance, cho phép chuyển đổi trạng thái hệ thống linh hoạt thông qua API Gateway stageVariables.
+* Lambda Vacuum & Analyze hoạt động hiệu quả, tự động dọn dẹp database và tối ưu query planner định kỳ.
+* Lambda Reset Daily đảm bảo dữ liệu hàng ngày được reset đúng cách và nhất quán.
+* Cấu hình EventBridge rules tự động kích hoạt các Lambda theo lịch trình:
+  * Vacuum & Analyze: chạy hàng ngày lúc 2:00 AM.
+  * Reset Daily: chạy hàng ngày lúc 0:00 AM.
+  * Maintenance: kích hoạt theo sự kiện thủ công hoặc tự động khi cần.
+* Hệ thống bảo trì tự động giúp giảm thiểu thời gian chết và tăng độ ổn định của hệ thống.

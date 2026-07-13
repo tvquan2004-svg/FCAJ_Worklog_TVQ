@@ -1,33 +1,32 @@
 ---
 title: "Worklog Tuần 4"
-date: 2026-06-25
+date: 2026-05-25
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
+
 ### Mục tiêu tuần 4:
 
-* Hiểu và nắm bắt các khái niệm về kiến trúc Serverless trên nền tảng AWS.
-* Làm quen và thực hành với AWS Lambda cùng các dịch vụ cơ sở dữ liệu Serverless (DynamoDB, Aurora).
-* Khám phá các dịch vụ thuộc lớp biên mạng và bảo mật: API Gateway, CloudFront, AWS WAF.
+* Tạo Amazon Aurora PostgreSQL cluster làm cơ sở dữ liệu chính cho hệ thống.
+* Cấu hình RDS Proxy để gom kết nối, giảm tải database khi Lambda scale.
+* Tạo CloudFormation Stack để tự động hóa triển khai hạ tầng.
+* Cập nhật IAM Policy với cluster-id và database-user-name thực tế.
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------------ | ----------------- |
-| 2    | - Tìm hiểu kiến trúc Serverless trên AWS:<br />+ Khái niệm Serverless.<br />+ Ưu/nhược điểm so với máy chủ truyền thống.<br />+ Khám phá AWS Lambda.                | 25/06/2026       | 25/06/2026         |                   |
-| 3    | - Tìm hiểu các Database hỗ trợ Serverless:<br />+ Amazon DynamoDB.<br />+ Amazon Aurora Serverless.<br />+ Use cases cho từng loại DB.                                          | 26/06/2026       | 26/06/2026         |                   |
-| 4    | - Khởi tạo Amazon Aurora.<br />- Thử đóng gói toàn bộ dự án thành một lambda.                                                                                                  | 27/06/2026       | 27/06/2026         |                   |
-| 5    | - Tìm hiểu lớp biên mạng:<br />+ Amazon API Gateway.<br />+ Amazon CloudFront.<br />+ AWS WAF.<br />- Sử dụng CloudFormation để khởi tạo lớp biên mạng cho lambda đã làm. | 28/06/2026       | 28/06/2026         |                   |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu Amazon Aurora PostgreSQL: <br> + Kiến trúc cluster, writer/reader instances. <br> + So sánh Aurora với RDS MySQL/PostgreSQL tiêu chuẩn. <br> + Các thông số cấu hình: instance class, storage, backup. | 26/05/2026 | 26/05/2026 | |
+| 3 | - Tạo Amazon Aurora PostgreSQL cluster: <br> + Cấu hình VPC, subnet groups, security groups. <br> + Tạo writer instance cho read/write operations. <br> + Thiết lập automated backup và maintenance window. | 27/05/2026 | 27/05/2026 | |
+| 4 | - Tìm hiểu và cấu hình RDS Proxy: <br> + Cách RDS Proxy gom kết nối từ Lambda để giảm tải database. <br> + Tạo RDS Proxy, kết nối với Aurora cluster. <br> + Cấu hình IAM Role cho phép Lambda sử dụng RDS Proxy. | 28/05/2026 | 28/05/2026 | |
+| 5 | - Tạo CloudFormation Stack: <br> + Viết CloudFormation template cho toàn bộ hạ tầng. <br> + Tạo stack, triển khai các tài nguyên: Aurora, RDS Proxy, Security Groups. <br> - Cập nhật IAM Policy với cluster-id và database-user-name thực tế. | 29/05/2026 | 29/05/2026 | |
+| 6 - CN | - Kiểm tra kết nối và hoàn thiện: <br> + Kiểm tra kết nối từ Lambda đến Aurora qua RDS Proxy. <br> + Xác nhận IAM Auth hoạt động. <br> + Tài liệu hóa cấu hình cho team. | 30/05/2026 | 31/05/2026 | |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu rõ khái niệm Serverless, cách tối ưu hóa chi phí và giảm bớt gánh nặng vận hành máy chủ.
-* Nắm được cơ chế hoạt động của AWS Lambda, cấu hình trigger, quyền thực thi.
-* Phân biệt được sự khác nhau giữa DynamoDB và Aurora Serverless, cũng như khi nào nên áp dụng loại nào cho dự án.
-* Triển khai thành công mô hình Serverless tất cả trong một.
-* Hiểu vai trò của các dịch vụ lớp biên:
-  * API Gateway:Đóng vai trò là cửa ngõ quản lý và định tuyến các API calls vào Lambda.
-  * CloudFront: Hỗ trợ phân phối nội dung đến người dùng cuối với độ trễ thấp nhất.
-  * AWS WAF: Cách hoạt động của tường lửa ứng dụng web để chặn các luồng traffic độc hại trước khi chúng chạm đến backend.
-* Có khả năng xâu chuỗi các dịch vụ: `End-user -> CloudFront -> API Gateway -> Lambda -> DynamoDB`.
+* Tạo thành công Amazon Aurora PostgreSQL cluster với writer instance, sẵn sàng cho production.
+* Cấu hình RDS Proxy thành công, giúp gom kết nối từ Lambda, ngăn chặn tình trạng cạn kiệt kết nối database khi Lambda scale đột ngột.
+* CloudFormation Stack được triển khai thành công, tự động hóa việc khởi tạo toàn bộ hạ tầng Aurora + RDS Proxy.
+* IAM Policy được cập nhật với cluster-id và database-user-name thực tế, đảm bảo bảo mật và phân quyền chính xác.
+* Kiểm tra kết nối Lambda -> RDS Proxy -> Aurora hoạt động ổn định.

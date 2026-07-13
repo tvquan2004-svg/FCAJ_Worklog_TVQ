@@ -4,14 +4,17 @@ date: 2024-01-01
 weight: 1
 chapter: false
 ---
-
 # Báo cáo thực tập
+
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Bùi Bình Nguyên
 
-&emsp; **Số điện thoại:** 0344898294
+![1783962734622](image/_index.vi/1783962734622.png)
 
-&emsp; **Email:** hoilamgiaaz@gmail.com
+&emsp; **Họ và tên:** Trần Văn Quân
+
+&emsp; **Số điện thoại:** 0589694852
+
+&emsp; **Email:** tvquan2004@gmail.com
 
 &emsp; **Trường:** Đại học Công nghệ TP.HCM (HUTECH)
 
@@ -23,16 +26,14 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 04/05/2026 đến ngày 10/7/2026
-
-![Ảnh đại diện của bạn](/images/avatar.png)
+&emsp; **Thời gian thực tập:** Từ ngày 05/05/2026 đến ngày 30/7/2026
 
 ### Nội dung báo cáo
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Các bài blogs đã đăng](3-BlogsPosted/)
-4.  [Các events đã tham gia](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Tự đánh giá](6-Self-evaluation/)
-7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
+1. [Worklog](1-Worklog/)
+2. [Proposal](2-Proposal/)
+3. [Các bài blogs đã đăng](3-BlogsPosted/)
+4. [Các events đã tham gia](4-EventParticipated/)
+5. [Workshop](5-Workshop/)
+6. [Tự đánh giá](6-Self-evaluation/)
+7. [Chia sẻ, đóng góp ý kiến](7-Feedback/)

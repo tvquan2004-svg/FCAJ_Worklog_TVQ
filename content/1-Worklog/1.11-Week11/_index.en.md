@@ -1,34 +1,35 @@
 ---
 title: "Worklog Week 11"
-date: 2024-01-01
+date: 2026-07-13
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Week 11 Objectives:
 
-* Connect and get familiar with members of the First Cloud AI Journey.
-* Understand basic AWS services, how to use console & CLI.
+* Build Lambda functions for the game system maintenance mode.
+* Separate functionality into independent Lambdas: Start Maintenance, Stop Maintenance, Vacuum & Analyze, Reset Daily.
+* Configure EventBridge to automatically trigger Lambdas on schedule or by events.
 
 ### Weekly Tasks:
-| Day | Tasks | Start Date | End Date | Resources |
+
+| Day | Tasks | Start Date | End Date | Resources / Notes |
 | --- | --- | --- | --- | --- |
-| Tue | - Get familiar with FCAJ members <br> - Read and note the rules and regulations | 11/08/2025 | 11/08/2025 |
-| Wed | - Learn about AWS and service types <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Thu | - Create AWS Free Tier account <br> - Learn AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install AWS CLI & configure <br> &emsp; + How to use AWS CLI | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Fri | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - How to SSH into EC2 <br> - Learn about Elastic IP | 14/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| Sat | - **Practice:** <br>&emsp; + Create EC2 instance <br>&emsp; + SSH connection <br>&emsp; + Attach EBS volume | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| Mon | - Design maintenance system architecture:<br>+ Identify required maintenance modes.<br>+ Design system state transition flow (online -> maintenance -> online).<br>+ Define API locking mechanism during maintenance. | 14/07/2026 | 14/07/2026 | |
+| Tue | - Build Start Maintenance & Stop Maintenance Lambdas:<br>+ Start Maintenance: update API Gateway stageVariables, block new requests, notify maintenance.<br>+ Stop Maintenance: restore stageVariables, allow requests again.<br>+ Integrate with API Gateway SDK for state changes. | 15/07/2026 | 15/07/2026 | |
+| Wed | - Build Vacuum & Analyze Lambda:<br>+ Automatically run VACUUM to clean up dead tuples in the database.<br>+ Run ANALYZE to update query planner statistics.<br>+ Log results and send completion notification. | 16/07/2026 | 16/07/2026 | |
+| Thu | - Build Reset Daily Lambda:<br>+ Handle daily data reset (quests, daily gifts, free plays...).<br>+ Ensure data consistency during reset.<br>+ Log and notify reset results. | 17/07/2026 | 17/07/2026 | |
+| Fri - Sat | - Configure EventBridge and test:<br>+ Create EventBridge rules for each Lambda with specific schedules.<br>+ Set up CloudWatch Metrics and logs for maintenance tasks.<br>+ Test the complete automated maintenance flow. | 18/07/2026 | 19/07/2026 | |
 
 ### Week 11 Results:
 
-* Understood what AWS is and grasped basic service groups.
-* Successfully created and configured AWS Free Tier account.
-* Got familiar with AWS Management Console.
-* Installed and configured AWS CLI.
-* Used AWS CLI to perform basic operations.
-* Able to use both web interface and CLI to manage AWS resources.
+* Completed maintenance system architecture design with clear operation modes.
+* Successfully built Start Maintenance and Stop Maintenance Lambdas, enabling flexible system state transitions via API Gateway stageVariables.
+* Vacuum & Analyze Lambda operates effectively, automatically cleaning the database and optimizing query planner periodically.
+* Reset Daily Lambda ensures daily data is reset correctly and consistently.
+* Configured EventBridge rules to automatically trigger Lambdas on schedule:
+  * Vacuum & Analyze: runs daily at 2:00 AM.
+  * Reset Daily: runs daily at 0:00 AM.
+  * Maintenance: triggered manually or automatically when needed.
+* Automated maintenance system minimizes downtime and increases system stability.

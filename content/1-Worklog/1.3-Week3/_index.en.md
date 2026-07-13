@@ -8,25 +8,24 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Objectives:
 
-* Set up AWS cost management, security configuration, and basic access control.
-* Learn and practice network configuration (VPC), DNS (Route53), and CLI management tools.
-* Apply automation in resource management (auto start/stop EC2, RDS) and explore new AWS AI services.
+* Set up IAM Policy and IAM Role to manage access permissions for AWS resources.
+* Calculate operational costs for the project using AWS Pricing Calculator.
+* Set up AWS Budgets: Cost Budget and Usage Budget for cost control.
 
 ### Weekly Tasks:
 
 | Day | Tasks | Start Date | End Date | Resources / Notes |
 | --- | --- | --- | --- | --- |
-| Mon | - Set up account and cost management with AWS Budgets. <br> - Install 2 free alerts: Actual 80% and Forecasted 100% within a 10 USD budget. | 18/05/2026 | 18/05/2026 |
-| Tue | - Set up Amazon VPC. <br> - Create and manage IAM User/Role to get AWS Access Key ID and Secret Access Key. | 19/05/2026 | 19/05/2026 |
-| Wed - Thu | - Learn and configure AWS CLI on Ubuntu EC2 through IAM User. <br> - Learn and try deploying Route53. | 20/05/2026 | 21/05/2026 | Forgot to disable Route53 and got charged $20 |
-| Fri | - Learn about AWS AI service: AWS Bedrock. | 22/05/2026 | 22/05/2026 |
-| Sat - Sun | - Set up auto start/stop for EC2 and RDS using Lambda Function and Amazon EventBridge. | 23/05/2026 | 24/05/2026 |
+| Tue | - Learn about IAM (Identity and Access Management): <br> + Components: User, Group, Role, Policy. <br> + Difference between IAM User and IAM Role. <br> + Structure of an IAM Policy document (JSON). | 19/05/2026 | 19/05/2026 | |
+| Wed | - Set up IAM Policy: <br> + Write policies allowing Lambda to access RDS, SQS, S3. <br> + Apply the least privilege principle. <br> - Set up IAM Role: <br> + Create roles for Lambda with the written policies. <br> + Attach roles to Lambda functions. | 20/05/2026 | 20/05/2026 | |
+| Thu | - Calculate operational costs with AWS Pricing Calculator: <br> + Input estimated parameters: EC2, RDS, S3, Lambda, API Gateway. <br> + Estimate monthly costs. <br> + Plan for cost optimization. | 21/05/2026 | 21/05/2026 | |
+| Fri | - Set up AWS Budgets: <br> + Cost Budget: monthly spending budget. <br> + Usage Budget: resource usage limits. <br> + Configure email alerts when thresholds are exceeded. | 22/05/2026 | 22/05/2026 | |
+| Sat - Sun | - Review and finalize: <br> + Review created IAM Policies. <br> + Verify budgets are working. <br> + Document policies and budgets for the team. | 23/05/2026 | 24/05/2026 | |
 
 ### Week 3 Results:
 
-* Successfully configured AWS Budgets cost alerts (80% and 100% thresholds for $10 budget).
-* Set up Amazon VPC and IAM permissions, successfully retrieved Access Key ID and Secret Access Key.
-* Configured and used AWS CLI on the Ubuntu EC2 environment.
-* Gained practical experience deploying Route53 (and learned the lesson of resource management after a $20 charge).
-* Obtained an overview of the AWS Bedrock AI service.
-* Optimized costs by automating EC2 and RDS start/stop using Lambda Function and Amazon EventBridge.
+* Thoroughly understood IAM operation and IAM Policy document structure.
+* Successfully set up IAM Policies following the least privilege principle for all major services.
+* Created IAM Roles for Lambda with necessary access to RDS, SQS, and S3.
+* Completed project cost estimation using AWS Pricing Calculator, enabling accurate budget planning.
+* Set up AWS Budgets including Cost Budget and Usage Budget with email alerts, ensuring effective cost control.
