@@ -5,40 +5,58 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Chia sẻ, đóng góp ý kiến
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Sau 12 tuần tham gia chương trình First Cloud AI Journey (FCAJ), em đã có cơ hội tiếp cận nhiều kiến thức mới về AWS Cloud cũng như được thực hành trên các bài toán thực tế. Dưới đây là một số đánh giá và chia sẻ của em về chương trình.
 
-### Đánh giá chung
+#### 7.1 Đánh giá chung
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+##### Môi trường học tập
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Em đánh giá cao môi trường học tập tại FCAJ vì luôn tạo điều kiện để học viên chủ động tìm hiểu và thực hành. Ngoài các buổi hướng dẫn, mọi người trong cộng đồng cũng thường xuyên trao đổi kinh nghiệm và hỗ trợ nhau khi gặp khó khăn trong quá trình triển khai trên AWS. Điều này giúp em có thêm động lực và học hỏi được nhiều kinh nghiệm từ các anh chị và các bạn khác.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+##### Sự hỗ trợ của đội ngũ mentor
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Các mentor luôn nhiệt tình giải đáp thắc mắc và định hướng cách tiếp cận vấn đề thay vì chỉ đưa ra lời giải. Trong quá trình thực hiện các workshop về AWS Serverless, em được hướng dẫn cách đọc log, phân tích nguyên nhân lỗi và tìm hướng khắc phục. Nhờ đó em hiểu rõ hơn cách vận hành của các dịch vụ AWS và nâng cao khả năng tự giải quyết vấn đề.
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+##### Tính thực tiễn của chương trình
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+Nội dung chương trình bám sát các công nghệ đang được sử dụng trong thực tế. Việc trực tiếp triển khai các dịch vụ như Amazon API Gateway, AWS Lambda, Amazon SQS, EventBridge, CloudWatch, Aurora và AWS Backup giúp em hiểu rõ cách các thành phần này phối hợp với nhau trong một hệ thống Serverless hoàn chỉnh, thay vì chỉ dừng ở lý thuyết.
 
+##### Cơ hội phát triển kỹ năng
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+Thông qua chương trình, em không chỉ học thêm về AWS mà còn cải thiện được nhiều kỹ năng khác như đọc tài liệu kỹ thuật, xây dựng tài liệu hướng dẫn, kiểm thử hệ thống, sử dụng Git và làm việc theo quy trình. Đây đều là những kỹ năng cần thiết khi tham gia các dự án thực tế.
 
+##### Tinh thần làm việc và hỗ trợ lẫn nhau
 
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+Điều em ấn tượng là tinh thần chia sẻ trong cộng đồng FCAJ. Khi gặp vấn đề, mọi người đều sẵn sàng cùng nhau trao đổi để tìm hướng giải quyết. Điều này tạo nên một môi trường học tập tích cực và giúp em tự tin hơn trong quá trình nghiên cứu các dịch vụ AWS.
+
+##### Tài liệu và nội dung đào tạo
+
+Hệ thống tài liệu và workshop được xây dựng khá đầy đủ, có lộ trình rõ ràng từ cơ bản đến nâng cao. Việc kết hợp giữa lý thuyết và thực hành giúp em dễ dàng nắm bắt kiến thức cũng như áp dụng ngay vào các bài triển khai trên AWS.
+
+#### 7.2 Một số chia sẻ
+
+##### Điều em hài lòng nhất trong chương trình
+
+Điều em cảm thấy ý nghĩa nhất là được trực tiếp triển khai và kiểm thử các dịch vụ AWS trong một kiến trúc Serverless. Việc tự xây dựng các workshop về API Gateway, Lambda, SQS FIFO, EventBridge, CloudWatch và AWS Backup giúp em hiểu rõ hơn cách thiết kế cũng như vận hành một hệ thống trên nền tảng AWS.
+
+##### Điều em mong muốn chương trình cải thiện
+
+Em mong chương trình có thêm một số buổi chia sẻ chuyên sâu về quá trình xử lý sự cố trong môi trường AWS, chẳng hạn như cách phân tích log, xử lý lỗi IAM, tối ưu chi phí hoặc các kinh nghiệm triển khai thực tế. Điều này sẽ giúp học viên có thêm góc nhìn khi làm việc với các hệ thống thực tế.
+
+##### Có giới thiệu chương trình cho người khác không?
+
+Em sẵn sàng giới thiệu FCAJ cho bạn bè hoặc các bạn sinh viên quan tâm đến Cloud Computing. Chương trình mang lại nhiều cơ hội thực hành, được tiếp cận các dịch vụ AWS phổ biến và có sự đồng hành của đội ngũ mentor giàu kinh nghiệm. Đây là môi trường phù hợp để xây dựng nền tảng trước khi tham gia vào các dự án thực tế.
+
+#### 7.3 Đề xuất và mong muốn
+
+##### Đề xuất
+
+Em mong chương trình có thêm các workshop hoặc mini project tổng hợp, kết hợp nhiều dịch vụ AWS trong cùng một bài toán để học viên có cơ hội luyện tập việc thiết kế kiến trúc và xử lý các tình huống gần với môi trường doanh nghiệp hơn.
+
+Ngoài ra, nếu có thêm các buổi chia sẻ về kinh nghiệm triển khai thực tế, tối ưu kiến trúc hoặc chuẩn bị cho các chứng chỉ AWS thì sẽ giúp học viên có thêm định hướng sau khi hoàn thành khóa học.
+
+##### Mong muốn trong tương lai
+
+Nếu có cơ hội, em rất mong được tiếp tục tham gia các chương trình chuyên sâu hơn của FCAJ về AWS Cloud, Serverless hoặc AI trên nền tảng AWS. Đồng thời, em cũng hy vọng có thể đồng hành cùng cộng đồng trong các hoạt động chia sẻ kiến thức hoặc hỗ trợ các khóa học tiếp theo.

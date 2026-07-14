@@ -6,38 +6,58 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Feedback
 
-> Here you can freely share your personal opinions about your experience in the First Cloud AI Journey program, helping the FCAJ team improve any shortcomings based on the following categories:
+After 12 weeks of participating in the First Cloud AI Journey (FCAJ) program, I had the opportunity to access new knowledge about AWS Cloud and practice on real-world problems. Below are my evaluations and reflections on the program.
 
-### General Evaluation
+#### 7.1 General Evaluation
 
-**1. Working Environment**
-The working environment is very friendly and open. FCAJ members are always ready to help when I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think there could be more social or team bonding activities for everyone to get to know each other better.
+##### Learning Environment
 
-**2. Mentor / Admin Team Support**
-Mentors provide very detailed guidance, explain clearly when I don't understand, and always encourage me to ask questions. The admin team supports procedures, documents, and creates conditions for me to work smoothly. I highly appreciate that mentors allow me to try and solve problems myself instead of just providing answers.
+I highly appreciate the learning environment at FCAJ as it always encourages learners to proactively explore and practice. In addition to guidance sessions, community members regularly exchange experiences and support each other when facing difficulties during AWS deployment. This gave me more motivation and helped me learn valuable experiences from seniors and peers.
 
-**3. Alignment between Work and Major**
-The work assigned to me matches the knowledge I learned at school, while also expanding into new areas I had never been exposed to before. This allows me to both consolidate foundational knowledge and learn practical skills.
+##### Mentor Support
 
-**4. Learning & Skill Development Opportunities**
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. Mentors also shared many practical experiences that helped me better orient my career.
+The mentors were always enthusiastic in answering questions and guiding problem-solving approaches rather than just providing solutions. During the AWS Serverless workshops, I was guided on how to read logs, analyze error causes, and find fixes. This helped me better understand how AWS services operate and improved my problem-solving skills.
 
-**5. Culture & Team Spirit**
-The company culture is very positive: everyone respects each other, works seriously but still enjoys themselves. When there are urgent projects, everyone works together, supporting each other regardless of position. This makes me feel like I am part of the team, even as an intern.
+##### Practicality of the Program
 
-**6. Internship Policies / Benefits**
-The company provides internship allowances and flexible time arrangements when needed. Additionally, being able to participate in internal training sessions is a big plus.
+The program content closely follows technologies currently used in practice. Directly deploying services such as Amazon API Gateway, AWS Lambda, Amazon SQS, EventBridge, CloudWatch, Aurora, and AWS Backup helped me understand how these components work together in a complete Serverless system, rather than just stopping at theory.
 
-### Some Additional Questions
-- What did you **enjoy most** during your internship?
-- What do you think the company **needs to improve** for future interns?
-- If recommending to friends, would you **encourage them to intern here**? Why?
+##### Skill Development Opportunities
 
-### Suggestions & Wishes
-- Do you have any suggestions to improve the internship experience?
-- Would you like to continue this program in the future?
-- Other feedback (feel free to share):
+Through the program, I not only learned more about AWS but also improved many other skills such as reading technical documentation, writing guide documents, system testing, using Git, and following workflows. These are all essential skills when participating in real projects.
+
+##### Work Ethic and Mutual Support
+
+What impressed me was the sharing spirit within the FCAJ community. When encountering issues, everyone was willing to discuss together to find solutions. This created a positive learning environment and helped me become more confident in researching AWS services.
+
+##### Training Materials and Content
+
+The documentation and workshop system was quite comprehensive, with a clear roadmap from basic to advanced. The combination of theory and practice helped me easily grasp knowledge and apply it immediately to AWS deployment exercises.
+
+#### 7.2 Some Reflections
+
+##### What I Liked Most About the Program
+
+What I found most meaningful was being able to directly deploy and test AWS services in a Serverless architecture. Building workshops on API Gateway, Lambda, SQS FIFO, EventBridge, CloudWatch, and AWS Backup helped me better understand how to design and operate a system on AWS.
+
+##### What I Hope the Program Improves
+
+I hope the program includes more in-depth sharing sessions on troubleshooting in AWS environments, such as log analysis, IAM error handling, cost optimization, or real-world deployment experiences. This would provide learners with more perspectives when working with actual systems.
+
+##### Would I Recommend the Program to Others?
+
+I am happy to recommend FCAJ to friends or students interested in Cloud Computing. The program offers many hands-on opportunities, access to popular AWS services, and the guidance of an experienced mentor team. It is a suitable environment to build a foundation before joining real projects.
+
+#### 7.3 Suggestions and Wishes
+
+##### Suggestions
+
+I hope the program adds more comprehensive workshops or mini projects that combine multiple AWS services in a single problem, giving learners the opportunity to practice architecture design and handle scenarios closer to real enterprise environments.
+
+Additionally, having more sharing sessions on real-world deployment experience, architecture optimization, or preparation for AWS certifications would help learners have better direction after completing the course.
+
+##### Future Wishes
+
+If given the opportunity, I would very much like to continue participating in more advanced FCAJ programs on AWS Cloud, Serverless, or AI on AWS. At the same time, I hope to continue accompanying the community in knowledge-sharing activities or supporting future courses.
