@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 # Bài thu hoạch — [Tên sự kiện]
 
-| Thông tin   | Chi tiết                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| Ngày        | [Ngày diễn ra]                                                                             |
-| Địa điểm | [Địa điểm tổ chức]                                                                          |
-| Vai trò     | [Vai trò của bạn]                                                                           |
+| Thông tin   | Chi tiết                |
+| ------------ | ------------------------ |
+| Ngày        | [Ngày diễn ra]         |
+| Địa điểm | [Địa điểm tổ chức] |
+| Vai trò     | [Vai trò của bạn]     |
 
 ### Mục Đích Của Sự Kiện
 
@@ -40,4 +36,5 @@ pre: " <b> 4.3. </b> "
 - [Bài học 2]
 
 #### Một số hình ảnh khi tham gia sự kiện
+
 * Thêm các hình ảnh của các bạn tại đây

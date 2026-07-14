@@ -1,6 +1,6 @@
 baseURL = "https://tvquan2004-svg.github.io/FCAJ_Worklog_TVQ/"
 relativeURLs = false
-canonifyURLs = true
+canonifyURLs = false
 defaultContentLanguage = "vi"
 
 # Change the default theme to be use when building the site with Hugo
