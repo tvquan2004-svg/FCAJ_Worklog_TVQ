@@ -5,9 +5,6 @@ weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
-
-# Self-evaluation
-
 Throughout the **First Cloud AI Journey (FCAJ)** training program from May 5, 2026 to July 30, 2026, I had the opportunity to learn, practice, and deploy various solutions on **AWS Cloud**, especially **Serverless** architecture and system operations support services.
 
 During project implementation and workshop development, I deployed many AWS services such as **Amazon API Gateway, AWS Lambda, Amazon SQS FIFO, Dead Letter Queue (DLQ), Amazon EventBridge, Amazon Aurora, AWS Backup, and Amazon CloudWatch**. Through this, I gained a deeper understanding of designing serverless architecture, building synchronous and asynchronous processing flows, automating system maintenance tasks, implementing backup mechanisms, and monitoring application activities on AWS.
@@ -20,18 +17,18 @@ To objectively reflect on the internship process, I hereby evaluate myself based
 
 | No. | Criteria                                       | Description                                                                                 | Good | Fair | Average |
 | --- | ---------------------------------------------- | ------------------------------------------------------------------------------------------- | ---- | ---- | ------- |
-| 1   | **Professional Knowledge & Skills**            | Understanding of the field, applying knowledge to practice, tool usage skills, work quality | ✅   | ☐   | ☐      |
-| 2   | **Learning Ability**                           | Acquiring new knowledge, learning quickly                                                   | ☐   | ✅   | ☐      |
-| 3   | **Proactiveness**                              | Self-learning, taking on tasks without waiting for instructions                             | ☐   | ✅   | ☐      |
-| 4   | **Responsibility**                             | Completing work on time, ensuring quality                                                   | ✅   | ☐   | ☐      |
-| 5   | **Discipline**                                 | Following schedule, rules, work procedures                                                  | ✅   | ☐   | ☐      |
-| 6   | **Improvement Mindset**                        | Willing to receive feedback and improve                                                     | ☐   | ✅   | ☐      |
-| 7   | **Communication**                              | Presenting ideas, reporting clearly                                                         | ☐   | ✅   | ☐      |
-| 8   | **Teamwork**                                   | Working effectively with colleagues, participating in teams                                 | ✅   | ☐   | ☐      |
-| 9   | **Professional Conduct**                       | Respecting colleagues, partners, work environment                                           | ✅   | ☐   | ☐      |
-| 10  | **Problem-solving**                            | Identifying problems, proposing solutions, creativity                                       | ☐   | ✅   | ☐      |
-| 11  | **Contribution to Project/Organization**       | Work efficiency, improvement initiatives, team recognition                                  | ✅   | ☐   | ☐      |
-| 12  | **Overall**                                    | General evaluation of the entire internship                                                 | ✅   | ☐   | ☐      |
+| 1   | **Professional Knowledge & Skills**      | Understanding of the field, applying knowledge to practice, tool usage skills, work quality | ✅   | ☐   | ☐      |
+| 2   | **Learning Ability**                     | Acquiring new knowledge, learning quickly                                                   | ☐   | ✅   | ☐      |
+| 3   | **Proactiveness**                        | Self-learning, taking on tasks without waiting for instructions                             | ☐   | ✅   | ☐      |
+| 4   | **Responsibility**                       | Completing work on time, ensuring quality                                                   | ✅   | ☐   | ☐      |
+| 5   | **Discipline**                           | Following schedule, rules, work procedures                                                  | ✅   | ☐   | ☐      |
+| 6   | **Improvement Mindset**                  | Willing to receive feedback and improve                                                     | ☐   | ✅   | ☐      |
+| 7   | **Communication**                        | Presenting ideas, reporting clearly                                                         | ☐   | ✅   | ☐      |
+| 8   | **Teamwork**                             | Working effectively with colleagues, participating in teams                                 | ✅   | ☐   | ☐      |
+| 9   | **Professional Conduct**                 | Respecting colleagues, partners, work environment                                           | ✅   | ☐   | ☐      |
+| 10  | **Problem-solving**                      | Identifying problems, proposing solutions, creativity                                       | ☐   | ✅   | ☐      |
+| 11  | **Contribution to Project/Organization** | Work efficiency, improvement initiatives, team recognition                                  | ✅   | ☐   | ☐      |
+| 12  | **Overall**                              | General evaluation of the entire internship                                                 | ✅   | ☐   | ☐      |
 
 ### Areas for Improvement
 

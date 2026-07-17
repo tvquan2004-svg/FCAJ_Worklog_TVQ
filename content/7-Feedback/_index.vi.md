@@ -5,8 +5,6 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-# Chia sẻ, đóng góp ý kiến
-
 Sau 12 tuần tham gia chương trình First Cloud AI Journey (FCAJ), em đã có cơ hội tiếp cận nhiều kiến thức mới về AWS Cloud cũng như được thực hành trên các bài toán thực tế. Dưới đây là một số đánh giá và chia sẻ của em về chương trình.
 
 #### 7.1 Đánh giá chung

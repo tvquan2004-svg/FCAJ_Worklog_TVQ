@@ -6,120 +6,96 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Report on FCAJ Community Day
 
-# Report on "GenAI-powered App-DB Modernization workshop"
+| Info        | Details                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| Date        | 27/06/2026                                                                                 |
+| Location | 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City |
+| Role        | Attendee                                                                                |
 
-### Purpose of the Event
+## 4.2.1 Purpose of the Event
 
-- Share best practices in modern application design
-- Introduce DDD methodology and event-driven architecture
-- Guide selection of appropriate compute services
-- Introduce AI tools supporting the development lifecycle
+The sharing session focused on introducing AI application solutions in the enterprise environment, particularly in infrastructure operations, cloud system optimization, and data security. The content also covered practical AI deployment models on AWS to improve operational efficiency and process automation.
 
-### Speaker List
+## 4.2.2 Speaker List
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+* **Mr. Steve Tran (Cloud Thinker):** Topic *Cloud Infrastructure Operations in the Age of Agentic Platform*.
+* **Mr. Hieu Nghi & Mr. Kiet & Mr. Trung:** Topic *Building a Voice AI Assistant for Enterprises*.
+* **Ms. Bao & Mr. Nguyen Nguyen (Cloud Kinetics):** Topic *Deploying DevOps AI Agent on AWS*.
+* **Mr. Truong & Ms. Minh Anh (Noventic):** Topic *Automating HR Processes with Amazon Q*.
+* **Mr. Toan Nguyen & Mr. Hieu Nghi (Renova Cloud):** Topic *Private Security Model for Amazon Q and MCP Server*.
 
-### Key Content
+## 4.2.3 Notable Content
 
-#### Negative Impacts of Legacy Application Architecture
+### Cloud Infrastructure Operations in the Age of Agentic Platform
 
-- Long product release time → Lost revenue/missed opportunities
-- Poor operational efficiency → Lost productivity, high costs
-- Non-compliance with security regulations → Security risks, reputational damage
+The presentation introduced the **Agentic Platform** model aimed at supporting smarter system operations through AI. This platform focuses on solving four common problems: incident investigation, code review, infrastructure cost optimization (FinOps), and security enhancement.
 
-#### Transitioning to Microservice Architecture
+The speaker also compared two AI Agent deployment models:
 
-Transform into a modular system – each function is an **independent service** communicating through **events** with 3 core pillars:
+* **Single Agent** can effectively handle most tasks if provided with sufficient context and workflow.
+* **Multi-Agent** divides work among multiple specialized agents to optimize processing capability, context management, and clearer permission segregation.
 
-- **Queue Management**: Asynchronous task processing
-- **Caching Strategy:** Performance optimization
-- **Message Handling:** Flexible communication between services
+This approach helps engineering teams reduce analysis and incident response time in real-world operational environments.
 
-#### Domain-Driven Design (DDD)
+### Building a Voice AI Assistant for Enterprises
 
-- **4-step method**: Identify domain events → arrange timeline → identify actors → determine bounded contexts
-- **Bookstore case study**: Illustrates practical DDD application
-- **Context mapping**: 7 patterns for integrating bounded contexts
+The next session presented the architecture for building a voice AI assistant using three main components:
 
-#### Event-Driven Architecture
+* **Speech-to-Text (STT)** converts speech into text.
+* **Large Language Model (LLM)** processes content and context.
+* **Text-to-Speech (TTS)** generates voice responses.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming
-- **Benefits**: Loose coupling, scalability, resilience
-- **Sync vs async comparison**: Understanding trade-offs
+Using text as an intermediary layer makes it easier for enterprises to apply Guardrails for content control as well as integrate real-time API calling capabilities.
 
-#### Compute Evolution
+In a Production environment, the system needs additional mechanisms such as Streaming to reduce latency, support for multiple voice regions, gender recognition, handling user interruptions, and call escalation to human agents when necessary.
 
-- **Shared Responsibility Model**: From EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Selection criteria
+### DevOps AI Agent on AWS
 
-#### Amazon Q Developer
+This topic introduced a solution using AI Agents to support DevOps processes, especially for automated incident investigation after system alerts from CloudWatch.
 
-- **SDLC automation**: From planning to maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+The solution is built on six key components:
 
-### What Was Learned
+* Context Learning
+* Control
+* Integration
+* Collaboration
+* Convenient
+* Cost Effective
 
-#### Design Thinking
+The processing workflow includes receiving alerts, classifying errors, performing Root Cause Analysis, proposing immediate remediation, and suggesting long-term improvements. The AI Agent only plays a supportive and advisory role, not directly making changes to the system.
 
-- **Business-first approach**: Always start from business domain, not technology
-- **Ubiquitous language**: Importance of common vocabulary between business and tech teams
-- **Bounded contexts**: How to identify and manage complexity in large systems
+### Applying Amazon Q in HR Processes
 
-#### Technical Architecture
+The session introduced Amazon Q as an internal AI assistant for enterprises with the ability to ensure higher data security compared to public AI platforms.
 
-- **Event storming technique**: Practical method for modeling business processes
-- Using **Event-driven communication** instead of synchronous calls
-- **Integration patterns**: Understanding when to use sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria for choosing from VM → containers → serverless
+Amazon Q can integrate with various systems such as Google Workspace, Microsoft Workspace, Jira, Salesforce, and GitHub via MCP.
 
-#### Modernization Strategy
+In the recruitment process, the system can automatically:
 
-- **Phased approach**: Don't rush, need clear roadmap
-- **7Rs framework**: Multiple paths depending on application characteristics
-- **ROI measurement**: Cost reduction + business agility
+* Analyze recruitment guideline documents.
+* Extract content from CVs, including OCR.
+* Evaluate and classify candidates.
+* Suggest salary levels and generate reports through no-code applications.
 
-### Application to Work
+### Private Security Model for Amazon Q and MCP Server
 
-- **Apply DDD** to current project: Event storming sessions with business team
-- **Refactor microservices**: Use bounded contexts to identify service boundaries
-- **Implement event-driven patterns**: Replace some sync calls with async messaging
-- **Serverless adoption**: Pilot AWS Lambda for suitable use cases
-- **Try Amazon Q Developer**: Integrate into development workflow to boost productivity
+The final topic focused on the architecture for deploying Amazon Q in a Private environment to ensure information security.
 
-### Event Experience
+The solution is built on the **Zero Trust** principle, helping to mitigate risks such as DDoS or Man-in-the-Middle attacks.
 
-Participating in the **"GenAI-powered App-DB Modernization"** workshop was a very rewarding experience, providing a comprehensive view of modernizing applications and databases using modern methods and tools.
+The proposed architecture includes:
 
-#### Learning from Highly Skilled Speakers
-- Speakers from AWS and major technology organizations shared **best practices** in modern application design.
-- Through real case studies, I gained a deeper understanding of applying **Domain-Driven Design (DDD)** and **Event-Driven Architecture** to large projects.
+* Placing the MCP Server in a Private Subnet within the VPC.
+* Amazon Q accessing via Interface Endpoint and VPC Connection.
+* Encrypting traffic with TLS through Internal ALB combined with ACM and Amazon Cognito.
+* Using Route 53 Resolver to hide internal DNS from the Internet.
 
-#### Hands-on Technical Experience
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.
-- Learned how to **decompose microservices** and identify **bounded contexts** to manage large system complexity.
-- Understood the trade-offs between **synchronous and asynchronous communication** as well as integration patterns like **pub/sub, point-to-point, streaming**.
+## 4.2.4 Application to Work
 
-#### Modern Tool Application
-- Directly explored **Amazon Q Developer**, an AI tool supporting SDLC from planning to maintenance.
-- Learned how to **automate code transformation** and pilot serverless with **AWS Lambda**, enhancing development productivity.
+* View AI as a supporting tool to enhance work efficiency rather than completely replacing human roles.
+* When deploying AI in enterprises, prioritize Data Governance, Guardrails, and Private security models before putting the system into Production.
+* Apply the Agentic Platform and Multi-Agent mindset to support system monitoring, incident investigation, and operational cost optimization in projects using AWS.
 
-#### Networking and Exchange
-- The workshop created opportunities for direct exchange with experts, colleagues, and business teams, helping **improve ubiquitous language** between business and tech.
-- Through real examples, I recognized the importance of the **business-first approach**, always starting from business needs rather than focusing only on technology.
-
-#### Key Takeaways
-- Applying DDD and event-driven patterns helps reduce **coupling**, increase **scalability** and **resilience** for the system.
-- Modernization strategy needs a **phased approach** and **ROI measurement**, avoiding rushing full system transformation.
-- AI tools like Amazon Q Developer can **boost productivity** when integrated into existing development workflows.
-
-#### Event Photos
-* Add your photos here
-> Overall, the event not only provided technical knowledge but also changed my way of thinking about application design, system modernization, and effective team collaboration.
+![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)

@@ -5,9 +5,6 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-
-# Feedback
-
 After 12 weeks of participating in the First Cloud AI Journey (FCAJ) program, I had the opportunity to access new knowledge about AWS Cloud and practice on real-world problems. Below are my evaluations and reflections on the program.
 
 #### 7.1 General Evaluation

@@ -5,121 +5,97 @@ weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
+# Bài thu hoạch sự kiện FCAJ Community Day
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+| Thông tin   | Chi tiết                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| Ngày        | 27/6/2026                                                                                  |
+| Địa điểm | Tầng 26 Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh |
+| Vai trò     | Người tham gia                                                                           |
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
 
-### Mục Đích Của Sự Kiện
+## 4.2.1 Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Buổi chia sẻ tập trung vào việc giới thiệu các giải pháp ứng dụng AI trong môi trường doanh nghiệp, đặc biệt là trong lĩnh vực vận hành hạ tầng, tối ưu hệ thống đám mây và đảm bảo an toàn dữ liệu. Nội dung cũng đề cập đến các mô hình triển khai AI thực tế trên nền tảng AWS nhằm nâng cao hiệu quả vận hành và tự động hóa quy trình.
 
-### Danh Sách Diễn Giả
+## 4.2.2 Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+* **Mr. Steve Trần (Cloud Thinker):** Chuyên đề  *Vận hành Hạ tầng Đám mây và Kỷ nguyên Agentic Platform* .
+* **Mr. Hiếu Nghị & Mr. Kiệt & Mr. Trung:** Chuyên đề  *Xây dựng Trợ lý AI Giọng nói cho Doanh nghiệp* .
+* **Ms. Bảo & Mr. Nguyên Nguyễn (Cloud Kinetics):** Chuyên đề  *Triển khai DevOps AI Agent trên AWS* .
+* **Mr. Trường & Ms. Minh Anh (Noventic):** Chuyên đề  *Tự động hóa Quy trình Nhân sự với Amazon Q* .
+* **Mr. Toàn Nguyễn & Mr. Hiếu Nghị (Renova Cloud):** Chuyên đề  *Mô hình Bảo mật Private cho Amazon Q và MCP Server* .
 
-### Nội Dung Nổi Bật
+## 4.2.3 Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+### Vận hành hạ tầng đám mây trong kỷ nguyên Agentic Platform
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Phần trình bày giới thiệu mô hình **Agentic Platform** với mục tiêu hỗ trợ vận hành hệ thống thông minh hơn thông qua AI. Nền tảng này tập trung giải quyết bốn bài toán phổ biến gồm điều tra sự cố, đánh giá mã nguồn, tối ưu chi phí hạ tầng (FinOps) và tăng cường bảo mật.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+Diễn giả cũng so sánh hai mô hình triển khai AI Agent:
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+* **Single Agent** có thể xử lý hiệu quả phần lớn tác vụ nếu được thiết kế đầy đủ ngữ cảnh và quy trình.
+* **Multi-Agent** chia nhỏ công việc cho nhiều Agent chuyên biệt nhằm tối ưu khả năng xử lý, quản lý context và phân quyền rõ ràng hơn.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+Cách tiếp cận này giúp đội ngũ kỹ sư rút ngắn thời gian phân tích và xử lý sự cố trong môi trường vận hành thực tế.
 
-#### Domain-Driven Design (DDD)
+### Xây dựng trợ lý AI giọng nói cho doanh nghiệp
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+Nội dung tiếp theo trình bày kiến trúc xây dựng trợ lý AI sử dụng ba thành phần chính:
 
-#### Event-Driven Architecture
+* **Speech-to-Text (STT)** chuyển giọng nói thành văn bản.
+* **Large Language Model (LLM)** xử lý nội dung và ngữ cảnh.
+* **Text-to-Speech (TTS)** tạo phản hồi bằng giọng nói.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Việc sử dụng văn bản làm lớp trung gian giúp doanh nghiệp dễ dàng áp dụng Guardrails để kiểm soát nội dung cũng như tích hợp khả năng gọi API theo thời gian thực.
 
-#### Compute Evolution
+Ở môi trường Production, hệ thống cần bổ sung các cơ chế như Streaming nhằm giảm độ trễ, hỗ trợ nhiều vùng giọng nói, nhận diện giới tính, xử lý tình huống người dùng ngắt lời và chuyển tiếp cuộc gọi đến nhân viên khi cần thiết.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+### DevOps AI Agent trên AWS
 
-#### Amazon Q Developer
+Chuyên đề giới thiệu giải pháp sử dụng AI Agent để hỗ trợ quy trình DevOps, đặc biệt trong việc tự động điều tra sự cố sau khi hệ thống phát sinh cảnh báo từ CloudWatch.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Giải pháp được xây dựng dựa trên sáu thành phần chính:
 
-### Những Gì Học Được
+* Context Learning
+* Control
+* Integration
+* Collaboration
+* Convenient
+* Cost Effective
 
-#### Tư Duy Thiết Kế
+Quy trình xử lý bao gồm tiếp nhận cảnh báo, phân loại lỗi, phân tích nguyên nhân gốc (Root Cause Analysis), đề xuất hướng khắc phục trước mắt và đưa ra các cải tiến dài hạn. AI Agent chỉ đóng vai trò hỗ trợ và đề xuất, không trực tiếp thực hiện thay đổi trên hệ thống.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### Ứng dụng Amazon Q trong quy trình nhân sự
 
-#### Kiến Trúc Kỹ Thuật
+Buổi chia sẻ giới thiệu Amazon Q như một trợ lý AI nội bộ phục vụ doanh nghiệp với khả năng đảm bảo tính bảo mật dữ liệu cao hơn so với các nền tảng AI công cộng.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+Amazon Q có thể tích hợp với nhiều hệ thống như Google Workspace, Microsoft Workspace, Jira, Salesforce và GitHub thông qua MCP.
 
-#### Chiến Lược Hiện Đại Hóa
+Trong quy trình tuyển dụng, hệ thống có thể tự động:
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+* Phân tích tài liệu hướng dẫn tuyển dụng.
+* Trích xuất nội dung từ CV, bao gồm cả OCR.
+* Đánh giá và phân loại ứng viên.
+* Đề xuất mức lương cũng như xuất báo cáo thông qua các ứng dụng no-code.
 
-### Ứng Dụng Vào Công Việc
+### Mô hình bảo mật Private cho Amazon Q và MCP Server
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Chuyên đề cuối cùng tập trung vào kiến trúc triển khai Amazon Q trong môi trường Private nhằm đảm bảo an toàn thông tin.
 
-### Trải nghiệm trong event
+Giải pháp được xây dựng theo nguyên tắc  **Zero Trust** , giúp hạn chế các nguy cơ như tấn công DDoS hoặc Man-in-the-Middle.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Kiến trúc được đề xuất bao gồm:
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+* Đặt MCP Server trong Private Subnet của VPC.
+* Amazon Q truy cập thông qua Interface Endpoint và VPC Connection.
+* Mã hóa lưu lượng bằng TLS thông qua Internal ALB kết hợp ACM và Amazon Cognito.
+* Sử dụng Route 53 Resolver để che giấu DNS nội bộ khỏi Internet.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+## 4.2.4 Ứng Dụng Vào Công Việc
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+* Xem AI là công cụ hỗ trợ nhằm nâng cao hiệu quả công việc thay vì thay thế hoàn toàn vai trò của con người.
+* Khi triển khai AI trong doanh nghiệp cần ưu tiên Data Governance, Guardrails và các mô hình bảo mật Private trước khi đưa hệ thống vào môi trường Production.
+* Vận dụng tư duy Agentic Platform và Multi-Agent để hỗ trợ giám sát hệ thống, điều tra sự cố cũng như tối ưu chi phí vận hành trong các dự án sử dụng AWS.
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)

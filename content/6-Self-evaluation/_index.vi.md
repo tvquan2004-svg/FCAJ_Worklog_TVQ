@@ -5,10 +5,6 @@ weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
-
-
-# Tự đánh giá
-
 Trong suốt quá trình tham gia khóa đào tạo  **First Cloud AI Journey (FCAJ)**  từ ngày 5/5/2026 đến ngày 30/7/2026, em đã có cơ hội học tập, thực hành và triển khai nhiều giải pháp trên nền tảng  **AWS Cloud** , đặc biệt là kiến trúc **Serverless** và các dịch vụ hỗ trợ vận hành hệ thống.
 
 Trong quá trình thực hiện dự án và xây dựng các workshop, em đã triển khai nhiều dịch vụ AWS như  **Amazon API Gateway, AWS Lambda, Amazon SQS FIFO, Dead Letter Queue (DLQ), Amazon EventBridge, Amazon Aurora, AWS Backup và Amazon CloudWatch** . Thông qua đó, em hiểu rõ hơn về cách thiết kế kiến trúc serverless, xây dựng các luồng xử lý đồng bộ và bất đồng bộ, tự động hóa các tác vụ bảo trì hệ thống, triển khai cơ chế sao lưu dữ liệu và giám sát hoạt động của ứng dụng trên môi trường AWS.
