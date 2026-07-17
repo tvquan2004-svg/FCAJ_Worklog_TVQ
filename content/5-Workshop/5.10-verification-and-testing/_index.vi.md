@@ -1,5 +1,3 @@
-moed
-
 ---
 title: "Kiểm tra kết quả và thực nghiệm"
 date: 2026-07-13
