@@ -9,8 +9,6 @@ pre: " <b> 3.2. </b> "
 
 Trong quá trình tìm hiểu về Amazon EKS, mình thấy AWS vừa giới thiệu tính năng Customer-Routed Control Plane Egress. Tính năng này cho phép lưu lượng từ Control Plane của Kubernetes được định tuyến thông qua Amazon VPC của khách hàng, giúp tăng khả năng kiểm soát và bảo mật hệ thống.
 
-![Có thể là đồ họa về bản thiết kế, sơ đồ tầng và văn bản cho biết 'AWS Cloud AWS Region Amazon EKS Control Plane (managed) Your VPC kube-apiserver Your egress controls (choose any combination) 四 (EKS-managed) ENI your FC) EKS managed control plane trafic ออศรัทนอย ovor EKS managed network path governed your ogress contrals Customer destinations Admission wubhcok OIDC provider Legend Apgregate PI server Amazon EKS ENI VPC endpeint Transi Gatoway NAT Gateway PrivateLin'](https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/740769954_1520636753147268_6569374290610978119_n.jpg?stp=dst-jpg_tt6&cstp=mx921x535&ctp=s921x535&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEOWx61b8hA-5lYmEZhNsUWtNIwVyoUDzO00jBXKhQPM4hEyspulfaaBTEAx91gOQMo0e7_7o8Dz4UHRcFbWZDv&_nc_ohc=ML7L_ZDcrM4Q7kNvwEnLSLA&_nc_oc=Adq3MoZ5E_hTO2UC1-p_vnFKYBkjtRQyLc3odd_yb5sHE9fc004NAD-WzRypuvg4qXNTgwLfjqQLWC5vSjj1ubO9&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=dFpWsQnnBiVpmAoj6RTC4g&_nc_ss=7b2a8&oh=00_AQCEW_p70XQFIbV6a_QUzd8jNbkye_D0uos5c9mvKIuTjQ&oe=6A5ADFC7)
-
 #### 3.2.1 Amazon EKS là gì?
 
 Amazon Elastic Kubernetes Service (Amazon EKS) là dịch vụ Kubernetes được AWS quản lý. Dịch vụ này giúp người dùng triển khai và vận hành Kubernetes dễ dàng hơn mà không cần tự quản lý Control Plane. Ngoài ra, EKS còn tích hợp với nhiều dịch vụ AWS như IAM, VPC và CloudWatch để hỗ trợ quản lý và giám sát hệ thống.

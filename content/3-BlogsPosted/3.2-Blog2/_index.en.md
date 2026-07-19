@@ -9,7 +9,6 @@ pre: " <b> 3.2. </b> "
 
 While exploring Amazon EKS, I came across the new Customer-Routed Control Plane Egress feature. This feature allows Kubernetes Control Plane traffic to be routed through your Amazon VPC, giving you more control and better security.
 
-![AWS Cloud architecture diagram showing EKS Control Plane egress through VPC](https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/740769954_1520636753147268_6569374290610978119_n.jpg?stp=dst-jpg_tt6&cstp=mx921x535&ctp=s921x535&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEOWx61b8hA-5lYmEZhNsUWtNIwVyoUDzO00jBXKhQPM4hEyspulfaaBTEAx91gOQMo0e7_7o8Dz4UHRcFbWZDv&_nc_ohc=ML7L_ZDcrM4Q7kNvwEnLSLA&_nc_oc=Adq3MoZ5E_hTO2UC1-p_vnFKYBkjtRQyLc3odd_yb5sHE9fc004NAD-WzRypuvg4qXNTgwLfjqQLWC5vSjj1ubO9&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=dFpWsQnnBiVpmAoj6RTC4g&_nc_ss=7b2a8&oh=00_AQCEW_p70XQFIbV6a_QUzd8jNbkye_D0uos5c9mvKIuTjQ&oe=6A5ADFC7)
 
 #### 3.2.1 What is Amazon EKS?
 
