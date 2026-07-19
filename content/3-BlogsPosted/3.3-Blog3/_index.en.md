@@ -11,9 +11,9 @@ Hi everyone, today I'd like to share an interesting article from AWS about how P
 
 PAR is a company that provides technology solutions for restaurant chains. They developed a system that lets users ask questions in natural language, and the AI automatically generates SQL queries to retrieve data and respond. The idea sounds simple, but in practice, a critical challenge emerged: data security.
 
-![](https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/739699246_1520665259811084_3979309470280326443_n.jpg?stp=dst-jpg_tt6&cstp=mx853x497&ctp=s853x497&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGN4VpncdwfE0TYbKBi_HNoU0D3pXbypQRTQPeldvKlBBizMZPvCbF7IAWQw1XtrqEIXNncD3mSiJcTmmWhoAbR&_nc_ohc=zX7azuzigUoQ7kNvwEuuE9m&_nc_oc=Adowc2XcccTmhpEkOLjW_qMnTrdTBAZTtNr4hkMUv37wo7xelVUzan6F4CbdzRjH_dg5sgHKWKf-JkQj2GUhTh6r&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=a6DHMTKRpeUham_BJUritA&_nc_ss=7b2a8&oh=00_AQDtaOshej61mUQGDMSSUm9fvsou8L3jHxnbkEFnU6hnjQ&oe=6A5AC9DB)
+![1784465648067](image/_index.en/1784465648067.png)
 
-![Architecture diagram](https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/739620942_1520665423144401_5066396045548758978_n.jpg?stp=dst-jpg_tt6&cstp=mx857x430&ctp=s857x430&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEluZTeMDzHbgzfhVKc-dQU-VE6hT63A935UTqFPrcD3eXcLd2NsSV6Z7hMj-71X7cj_5lSLMPVmG1Q-CX0B6VJ&_nc_ohc=8auVoYRlI0wQ7kNvwHkKmsp&_nc_oc=AdpgLJJoxLplOtNLxST0lkp4eUExr8z-Spt3XRtuRCak5qals8lF00pP9cKyaZ9DEWcGP63B6Ju3U3YC8Of32Jhr&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=a6DHMTKRpeUham_BJUritA&_nc_ss=7b2a8&oh=00_AQDCNDWhlp5cSXe5kyXqqAP5TBg45K-Ht7l2BpYGKOELsg&oe=6A5AE51A)
+![1784465655036](image/_index.en/1784465655036.png)
 
 #### 3.3.1 The Problem
 

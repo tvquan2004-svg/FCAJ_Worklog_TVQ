@@ -7,7 +7,7 @@ pre: " <b> 3.1. </b> "
 ---
 ### **Sử dụng Amazon CloudFront để tăng tốc và tối ưu quá trình xử lý yêu cầu của người dùng**
 
-![Có thể là đồ họa về sơ đồ tầng, bản thiết kế và văn bản cho biết 'Amazon CloudFront Viewers Origin server 白白白官 Edge locations Regional edge caches'](https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/739508936_1519848743226069_530702931998462867_n.jpg?stp=dst-jpg_tt6&cstp=mx907x550&ctp=s907x550&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFSBVyckJD3jWyYfZhaV-tLR0emncwW07NHR6adzBbTsz7np6e_WGnm_e4YURaHkMwDXupoxzTOPCAU_8NhWNV1&_nc_ohc=Y9slTg22QTsQ7kNvwEZQtp-&_nc_oc=Ado5B4-ADRLb7Ag9QUEEtpc-OwgABzZgeCG8kPUgbrL_yB_xuH3nC8uKWKKE72aySScd3en9Os7kkILZI1iOs7Q5&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=AXqlakUu8H6izJwOgiRN3w&_nc_ss=7b2a8&oh=00_AQDQP2cDs_7eBdP8dle4TSbCgkSNfnFIiNT8eWuQCYpDTg&oe=6A5ADE88)
+![1784465530959](image/_index.vi/1784465530959.png)
 
 #### 3.1.1 Amazon CloudFront là gì?
 

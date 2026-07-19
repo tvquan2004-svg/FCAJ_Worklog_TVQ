@@ -9,6 +9,8 @@ pre: " <b> 3.2. </b> "
 
 Trong quá trình tìm hiểu về Amazon EKS, mình thấy AWS vừa giới thiệu tính năng Customer-Routed Control Plane Egress. Tính năng này cho phép lưu lượng từ Control Plane của Kubernetes được định tuyến thông qua Amazon VPC của khách hàng, giúp tăng khả năng kiểm soát và bảo mật hệ thống.
 
+![1784465571736](image/_index.vi/1784465571736.png)
+
 #### 3.2.1 Amazon EKS là gì?
 
 Amazon Elastic Kubernetes Service (Amazon EKS) là dịch vụ Kubernetes được AWS quản lý. Dịch vụ này giúp người dùng triển khai và vận hành Kubernetes dễ dàng hơn mà không cần tự quản lý Control Plane. Ngoài ra, EKS còn tích hợp với nhiều dịch vụ AWS như IAM, VPC và CloudWatch để hỗ trợ quản lý và giám sát hệ thống.
