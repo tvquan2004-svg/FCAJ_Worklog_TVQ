@@ -27,5 +27,3 @@ pre: " <b> 1. </b> "
 **Tuần 10:** [Dead Letter Queue và CloudWatch Monitoring](1.10-week10/)
 
 **Tuần 11:** [Lambda bảo trì hệ thống và EventBridge](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)

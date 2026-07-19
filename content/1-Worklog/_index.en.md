@@ -27,5 +27,3 @@ pre: " <b> 1. </b> "
 **Week 10:** [Dead Letter Queue & CloudWatch Monitoring](1.10-week10/)
 
 **Week 11:** [Maintenance Mode Lambda & EventBridge](1.11-week11/)
-
-**Week 12:** [Doing Task N...](1.12-week12/)
