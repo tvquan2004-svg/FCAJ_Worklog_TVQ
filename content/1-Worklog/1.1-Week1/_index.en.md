@@ -15,8 +15,8 @@ pre: " <b> 1.1. </b> "
 
 | Day       | Tasks                                                                                                                                                                                                                                                 | Start Date | End Date   | Resources / Notes      |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------------------- |
-| Tue - Sat | - Learn about the First Cloud AI Journey program. - Confirm project topic: Building a Server Game RESTful API with AWS services.  - Find team members and assign roles.  - Create AWS Free Tier account and get familiar with AWS Management Console. | 05/05/2026 | 09/05/2026 | First Cloud AI Journey |
-| Sun       | - Attend the FCAJ AWS workshop. - Understand enterprise mindset for cloud computing adoption.  - Explore AWS Free Tier 2025: list of free services, usage limits.  - Plan how to leverage Free Tier for the project.                                  | 10/05/2026 | 10/05/2026 | Workshop content       |
+| Tue - Sat | - Learn about the First Cloud AI Journey program. - Confirm project topic: Building a Server Game RESTful API with AWS services.  - Find team members and assign roles.  - Create AWS Free Tier account and get familiar with AWS Management Console. | 05/05/2026 | 08/05/2026 | First Cloud AI Journey |
+| Sun       | - Attend the FCAJ AWS workshop. - Understand enterprise mindset for cloud computing adoption.  - Explore AWS Free Tier 2025: list of free services, usage limits.  - Plan how to leverage Free Tier for the project.                                  | 09/05/2026 | 09/05/2026 | Workshop content       |
 
 ### Week 1 Results:
 

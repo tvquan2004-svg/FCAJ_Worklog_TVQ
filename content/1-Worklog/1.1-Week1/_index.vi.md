@@ -15,8 +15,8 @@ pre: " <b> 1.1. </b> "
 
 | Thứ  | Công việc                                                                                                                                                                                                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Ghi chú |
 | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ---------------------------- |
-| 2 - 6 | - Tìm hiểu tổng quan về chương trình First Cloud AI Journey. - Xác nhận đề tài: Xây dựng Server Game Restful API với các dịch vụ của AWS.  - Tìm kiếm thành viên nhóm và phân công vai trò.  - Tạo tài khoản AWS Free Tier và làm quen với AWS Management Console. | 05/05/2026       | 09/05/2026         | First Cloud AI Journey       |
-| 7     | - Tham gia hội thảo AWS của chương trình FCAJ. - Tìm hiểu mindset doanh nghiệp khi ứng dụng điện toán đám mây.  - Tham khảo AWS Free Tier 2025: danh sách các dịch vụ miễn phí, hạn mức sử dụng.  - Lên kế hoạch tận dụng Free Tier cho dự án.                    | 10/05/2026       | 10/05/2026         | Nội dung hội thảo         |
+| 2 - 6 | - Tìm hiểu tổng quan về chương trình First Cloud AI Journey. - Xác nhận đề tài: Xây dựng Server Game Restful API với các dịch vụ của AWS.  - Tìm kiếm thành viên nhóm và phân công vai trò.  - Tạo tài khoản AWS Free Tier và làm quen với AWS Management Console. | 05/05/2026       | 08/05/2026         | First Cloud AI Journey       |
+| 7     | - Tham gia hội thảo AWS của chương trình FCAJ. - Tìm hiểu mindset doanh nghiệp khi ứng dụng điện toán đám mây.  - Tham khảo AWS Free Tier 2025: danh sách các dịch vụ miễn phí, hạn mức sử dụng.  - Lên kế hoạch tận dụng Free Tier cho dự án.                    | 09/05/2026       | 09/05/2026         | Nội dung hội thảo         |
 
 ### Kết quả đạt được tuần 1:
 
