@@ -66,6 +66,6 @@ After participating in the event, I gained many valuable lessons not only in pro
 * **Invest in long-term value:** Continuously learning, updating new technologies, and maintaining a lifelong learning mindset will enhance competitiveness and create advantages when entering the labor market.
 * **Broaden business perspective:** When orienting careers, one should not only focus on technical knowledge but also equip themselves with an understanding of the business characteristics of each field, enabling them to build technology solutions that meet real enterprise needs.
 
-#### Event Attendance Evidence
+#### 4.4.5 Event Attendance Evidence
 
 ![1784463900811](image/_index.vi/1784463900811.png)

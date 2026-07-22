@@ -5,14 +5,13 @@ weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
-
 # Report on FCAJ Community Day
 
-| Info        | Details                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| Date        | 09/05/2026                                                                                 |
+| Info     | Details                                                                                 |
+| -------- | --------------------------------------------------------------------------------------- |
+| Date     | 09/05/2026                                                                              |
 | Location | 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City |
-| Role        | Attendee                                                                                |
+| Role     | Attendee                                                                                |
 
 ## 4.1.1 Purpose of the Event
 
@@ -68,4 +67,6 @@ The session introduced a model that divides AI into different roles correspondin
 * Spend time strengthening foundational knowledge of operating systems, computer networking, databases, and system design to reduce dependence on AI.
 * When using AI in software development, clearly divide tasks for each stage instead of asking AI to handle the entire project at once.
 
-![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![1784012809025](image/_index.vi/1784012809025.png)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)
+## 4.4.5 Event Attendance Evidence
+
+![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![1784690449254](image/_index.en/1784690449254.jpg)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)

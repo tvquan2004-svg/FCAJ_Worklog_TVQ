@@ -5,14 +5,13 @@ weight: 1
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
-
 # Report on FCAJ Community Day
 
-| Info        | Details                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| Date        | 27/06/2026                                                                                 |
+| Info     | Details                                                                                 |
+| -------- | --------------------------------------------------------------------------------------- |
+| Date     | 27/06/2026                                                                              |
 | Location | 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City |
-| Role        | Attendee                                                                                |
+| Role     | Attendee                                                                                |
 
 ## 4.3.1 Purpose of the Event
 
@@ -98,4 +97,6 @@ The proposed architecture includes:
 * When deploying AI in enterprises, prioritize Data Governance, Guardrails, and Private security models before putting the system into Production.
 * Apply the Agentic Platform and Multi-Agent mindset to support system monitoring, incident investigation, and operational cost optimization in projects using AWS.
 
-![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)
+## 4.4.5 Event Attendance Evidence
+
+![1784690550613](image/_index.en/1784690550613.jpg)

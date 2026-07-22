@@ -5,14 +5,13 @@ weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
-
 # Report on FCAJ Community Day
 
-| Info        | Details                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------ |
-| Date        | 30/05/2026                                                                                 |
+| Info     | Details                                                                                 |
+| -------- | --------------------------------------------------------------------------------------- |
+| Date     | 30/05/2026                                                                              |
 | Location | 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City |
-| Role        | Attendee                                                                                |
+| Role     | Attendee                                                                                |
 
 ## 4.2.1 Purpose of the Event
 
@@ -83,3 +82,7 @@ The speaker suggested breaking tasks into smaller steps, setting realistic goals
 * Study Serverless and Managed Services on AWS for cost-effective solutions, especially when building applications for startups.
 * Adopt DevOps as a culture involving people and processes, not just automation tools.
 * Recognize the root causes of procrastination and apply practical strategies to overcome them.
+
+## 4.4.5 Event Attendance Evidence
+
+![1784690593233](image/_index.en/1784690593233.png)

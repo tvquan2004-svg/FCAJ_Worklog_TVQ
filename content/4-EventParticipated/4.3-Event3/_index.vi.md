@@ -99,4 +99,4 @@ Kiến trúc được đề xuất bao gồm:
 
 ## 4.4.5 Minh chứng tham gia sự kiện
 
-![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)
+![1784690540075](image/_index.vi/1784690540075.jpg)
