@@ -19,13 +19,23 @@ pre: " <b> 4. </b> "
 
 &emsp;**Tên sự kiện:** FCAJ Community Day
 
-&emsp;**Thời gian:** 27/06/2026
+&emsp;**Thời gian:** 30/05/2026
 
 &emsp;**Địa điểm:** Tầng 26 Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham gia
 
 ### [Event 3](4.3-Event3/)
+
+&emsp;**Tên sự kiện:** FCAJ Community Day
+
+&emsp;**Thời gian:** 27/06/2026
+
+&emsp;**Địa điểm:** Tầng 26 Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham gia
+
+### [Event 4](4.4-Event4/)
 
 &emsp;**Tên sự kiện:** FCAJ Community Day
 

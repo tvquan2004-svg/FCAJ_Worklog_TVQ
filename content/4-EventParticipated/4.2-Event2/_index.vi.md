@@ -5,97 +5,84 @@ weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
-
 # Bài thu hoạch sự kiện FCAJ Community Day
 
-| Thông tin | Chi tiết                                                                       |
-| --------- | ------------------------------------------------------------------------------ |
-| Ngày      | 27/6/2026                                                                      |
-| Địa điểm  | Tầng 26 Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh |
-| Vai trò   | Người tham gia                                                                 |
+| Thông tin   | Chi tiết                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| Ngày        | 30/05/2026                                                                                 |
+| Địa điểm | Tầng 26 Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP Hồ Chí Minh |
+| Vai trò     | Người tham gia                                                                           |
 
-## 4.2.1 Mục Đích Của Sự Kiện
+## 4.2.1 Mục đích của sự kiện
 
-Buổi chia sẻ tập trung vào việc giới thiệu các giải pháp ứng dụng AI trong môi trường doanh nghiệp, đặc biệt là trong lĩnh vực vận hành hạ tầng, tối ưu hệ thống đám mây và đảm bảo an toàn dữ liệu. Nội dung cũng đề cập đến các mô hình triển khai AI thực tế trên nền tảng AWS nhằm nâng cao hiệu quả vận hành và tự động hóa quy trình.
+Buổi chia sẻ bao gồm nhiều chủ đề khác nhau nhằm cung cấp cho người tham dự các phương pháp học tập thực tế, kinh nghiệm từ hackathon và dự án thực tế, cũng như tư duy và kỹ năng mềm trong học tập và làm việc trong lĩnh vực IT.
 
-## 4.2.2 Danh Sách Diễn Giả
+## 4.2.2 Danh sách diễn giả
 
-- **Mr. Steve Trần (Cloud Thinker):** Chuyên đề _Vận hành Hạ tầng Đám mây và Kỷ nguyên Agentic Platform_ .
-- **Mr. Hiếu Nghị & Mr. Kiệt & Mr. Trung:** Chuyên đề _Xây dựng Trợ lý AI Giọng nói cho Doanh nghiệp_ .
-- **Ms. Bảo & Mr. Nguyên Nguyễn (Cloud Kinetics):** Chuyên đề _Triển khai DevOps AI Agent trên AWS_ .
-- **Mr. Trường & Ms. Minh Anh (Noventic):** Chuyên đề _Tự động hóa Quy trình Nhân sự với Amazon Q_ .
-- **Mr. Toàn Nguyễn & Mr. Hiếu Nghị (Renova Cloud):** Chuyên đề _Mô hình Bảo mật Private cho Amazon Q và MCP Server_ .
+* **Mr. Hoàng Thái Linh** – Chủ đề: *Học AWS thông qua Cloud Quest và Floci*.
+* **Mr. Nguyễn Trần Minh Quân, Mr. An Khương Huỳnh & Mr. Quốc Anh Mai** – Chủ đề: *Kinh nghiệm từ LotusHacks 2026*.
+* **Ms. Nguyễn Thị Quỳnh Như** – Chủ đề: *Sự tự tin trong học tập và công việc*.
+* **Mr. Trần Nghĩa** – Chủ đề: *Ứng dụng Tử Vi Đại Việt và chuyển hệ thống lên AWS*.
+* **Mr. Trần Minh Quân** – Chủ đề: *DevOps và các vấn đề ẩn trong dự án*.
+* **Mr. Phạm Khắc Uy** – Chủ đề: *Tìm hiểu về sự trì hoãn*.
 
-## 4.2.3 Nội Dung Nổi Bật
+## 4.2.3 Nội dung nổi bật
 
-### Vận hành hạ tầng đám mây trong kỷ nguyên Agentic Platform
+### Học AWS thông qua Cloud Quest và Floci
 
-Phần trình bày giới thiệu mô hình **Agentic Platform** với mục tiêu hỗ trợ vận hành hệ thống thông minh hơn thông qua AI. Nền tảng này tập trung giải quyết bốn bài toán phổ biến gồm điều tra sự cố, đánh giá mã nguồn, tối ưu chi phí hạ tầng (FinOps) và tăng cường bảo mật.
+Diễn giả giới thiệu cách tiếp cận thực hành để học AWS thông qua **AWS Cloud Quest** – một trò chơi nhập vai 3D giúp người học xây dựng hạ tầng AWS qua các tình huống thực tế, và **Floci** – công cụ hỗ trợ học tập bằng cách cung cấp môi trường AWS thực hành, đồng thời hạn chế rủi ro phát sinh chi phí ngoài ý muốn.
 
-Diễn giả cũng so sánh hai mô hình triển khai AI Agent:
+Cách tiếp cận này giúp người mới tiếp cận AWS dễ dàng hơn thông qua các bài tập trực quan, tương tác mà không phải lo lắng về cấu hình phức tạp hay chi phí phát sinh.
 
-- **Single Agent** có thể xử lý hiệu quả phần lớn tác vụ nếu được thiết kế đầy đủ ngữ cảnh và quy trình.
-- **Multi-Agent** chia nhỏ công việc cho nhiều Agent chuyên biệt nhằm tối ưu khả năng xử lý, quản lý context và phân quyền rõ ràng hơn.
+### Kinh nghiệm từ LotusHacks 2026
 
-Cách tiếp cận này giúp đội ngũ kỹ sư rút ngắn thời gian phân tích và xử lý sự cố trong môi trường vận hành thực tế.
+Nhóm chia sẻ hành trình tham gia **LotusHacks 2026**, một cuộc thi hackathon nổi bật dành cho sinh viên đại học. Họ trình bày quá trình xây dựng các dự án như **SynthHunter** và **Vortex**, từ ý tưởng đến sản phẩm MVP (Minimum Viable Product) trong thời gian rất ngắn.
 
-### Xây dựng trợ lý AI giọng nói cho doanh nghiệp
+Bài học kinh nghiệm bao gồm cách phân chia công việc hiệu quả dưới áp lực thời gian, lựa chọn công nghệ phù hợp để tạo nguyên mẫu nhanh, và tầm quan trọng của tinh thần đồng đội cũng như giao tiếp rõ ràng trong suốt hackathon.
 
-Nội dung tiếp theo trình bày kiến trúc xây dựng trợ lý AI sử dụng ba thành phần chính:
+### Sự tự tin trong học tập và công việc
 
-- **Speech-to-Text (STT)** chuyển giọng nói thành văn bản.
-- **Large Language Model (LLM)** xử lý nội dung và ngữ cảnh.
-- **Text-to-Speech (TTS)** tạo phản hồi bằng giọng nói.
+Bài chia sẻ tập trung vào xây dựng sự tự tin trong môi trường học tập và làm việc. Thông điệp chính là tự tin không phải là không sợ, mà là dám thử dù vẫn còn lo lắng.
 
-Việc sử dụng văn bản làm lớp trung gian giúp doanh nghiệp dễ dàng áp dụng Guardrails để kiểm soát nội dung cũng như tích hợp khả năng gọi API theo thời gian thực.
+Diễn giả khuyến khích người tham dự bước ra khỏi vùng an toàn, xem thất bại là cơ hội học hỏi, và dần xây dựng sự tự tin thông qua những thành công nhỏ.
 
-Ở môi trường Production, hệ thống cần bổ sung các cơ chế như Streaming nhằm giảm độ trễ, hỗ trợ nhiều vùng giọng nói, nhận diện giới tính, xử lý tình huống người dùng ngắt lời và chuyển tiếp cuộc gọi đến nhân viên khi cần thiết.
+### Ứng dụng Tử Vi Đại Việt và chuyển hệ thống lên AWS
 
-### DevOps AI Agent trên AWS
+Diễn giả chia sẻ hành trình thực tế xây dựng ứng dụng **Tử Vi Đại Việt** và chuyển đổi hệ thống lên AWS. Phần này giúp tôi hiểu thêm về:
 
-Chuyên đề giới thiệu giải pháp sử dụng AI Agent để hỗ trợ quy trình DevOps, đặc biệt trong việc tự động điều tra sự cố sau khi hệ thống phát sinh cảnh báo từ CloudWatch.
+* **Kiến trúc Serverless** và cách nó giảm bớt gánh nặng vận hành.
+* **Managed Services** trên AWS giúp đơn giản hóa quản lý hạ tầng.
+* **Chiến lược tối ưu chi phí** cho Startup, bao gồm sử dụng Lambda, API Gateway và DynamoDB để giảm thiểu chi phí trong khi vẫn đảm bảo khả năng mở rộng.
 
-Giải pháp được xây dựng dựa trên sáu thành phần chính:
+### DevOps và các vấn đề ẩn trong dự án
 
-- Context Learning
-- Control
-- Integration
-- Collaboration
-- Convenient
-- Cost Effective
+Bài trình bày nhấn mạnh rằng **DevOps không chỉ là công cụ** – mà còn liên quan đến con người, quy trình và cách làm việc nhóm. Diễn giả chỉ ra các vấn đề ẩn phổ biến trong dự án như:
 
-Quy trình xử lý bao gồm tiếp nhận cảnh báo, phân loại lỗi, phân tích nguyên nhân gốc (Root Cause Analysis), đề xuất hướng khắc phục trước mắt và đưa ra các cải tiến dài hạn. AI Agent chỉ đóng vai trò hỗ trợ và đề xuất, không trực tiếp thực hiện thay đổi trên hệ thống.
+* Thiếu giao tiếp rõ ràng giữa đội phát triển và đội vận hành.
+* Quy trình làm việc riêng lẻ làm chậm tiến độ.
+* Quá phụ thuộc vào tự động hóa mà không hiểu quy trình bên dưới.
 
-### Ứng dụng Amazon Q trong quy trình nhân sự
+Một văn hóa DevOps thành công đòi hỏi sự thay đổi tư duy của toàn bộ đội nhóm, không chỉ đơn thuần là áp dụng CI/CD hay infrastructure-as-code.
 
-Buổi chia sẻ giới thiệu Amazon Q như một trợ lý AI nội bộ phục vụ doanh nghiệp với khả năng đảm bảo tính bảo mật dữ liệu cao hơn so với các nền tảng AI công cộng.
+### Tìm hiểu về sự trì hoãn
 
-Amazon Q có thể tích hợp với nhiều hệ thống như Google Workspace, Microsoft Workspace, Jira, Salesforce và GitHub thông qua MCP.
+Bài chia sẻ cuối cùng mang đến một góc nhìn mới về sự trì hoãn, cho thấy trì hoãn thường không chỉ do lười biếng. Thay vào đó, trì hoãn có thể xuất phát từ:
 
-Trong quy trình tuyển dụng, hệ thống có thể tự động:
+* **Nỗi sợ thất bại** – tránh né công việc để tự bảo vệ khỏi sự thất vọng.
+* **Nỗi sợ bị đánh giá** – lo lắng về cách người khác đánh giá kết quả.
+* **Thiếu tự tin** – nghi ngờ khả năng hoàn thành công việc của bản thân.
 
-- Phân tích tài liệu hướng dẫn tuyển dụng.
-- Trích xuất nội dung từ CV, bao gồm cả OCR.
-- Đánh giá và phân loại ứng viên.
-- Đề xuất mức lương cũng như xuất báo cáo thông qua các ứng dụng no-code.
+Diễn giả gợi ý chia nhỏ nhiệm vụ thành các bước nhỏ hơn, đặt mục tiêu thực tế và thực hành lòng trắc ẩn với bản thân để vượt qua sự trì hoãn.
 
-### Mô hình bảo mật Private cho Amazon Q và MCP Server
+## 4.2.4 Bài học và định hướng áp dụng
 
-Chuyên đề cuối cùng tập trung vào kiến trúc triển khai Amazon Q trong môi trường Private nhằm đảm bảo an toàn thông tin.
+* Khám phá **AWS Cloud Quest** và **Floci** như công cụ thực hành AWS trực quan, tiết kiệm chi phí.
+* Áp dụng bài học từ LotusHacks 2026 khi làm dự án có thời gian gấp: ưu tiên tính năng MVP, phân chia công việc hiệu quả, duy trì giao tiếp rõ ràng.
+* Xây dựng sự tự tin bằng cách hành động dù còn lo lắng, bắt đầu từ những mục tiêu nhỏ khả thi.
+* Tìm hiểu Serverless và Managed Services trên AWS để xây dựng giải pháp tiết kiệm chi phí, đặc biệt khi phát triển ứng dụng cho Startup.
+* Xem DevOps là văn hóa liên quan đến con người và quy trình, không chỉ là công cụ tự động hóa.
+* Nhận biết nguyên nhân gốc rễ của sự trì hoãn và áp dụng các chiến lược thực tế để vượt qua.
 
-Giải pháp được xây dựng theo nguyên tắc **Zero Trust** , giúp hạn chế các nguy cơ như tấn công DDoS hoặc Man-in-the-Middle.
+## 4.4.5 Minh chứng tham gia sự kiện
 
-Kiến trúc được đề xuất bao gồm:
-
-- Đặt MCP Server trong Private Subnet của VPC.
-- Amazon Q truy cập thông qua Interface Endpoint và VPC Connection.
-- Mã hóa lưu lượng bằng TLS thông qua Internal ALB kết hợp ACM và Amazon Cognito.
-- Sử dụng Route 53 Resolver để che giấu DNS nội bộ khỏi Internet.
-
-## 4.2.4 Ứng Dụng Vào Công Việc
-
-- Xem AI là công cụ hỗ trợ nhằm nâng cao hiệu quả công việc thay vì thay thế hoàn toàn vai trò của con người.
-- Khi triển khai AI trong doanh nghiệp cần ưu tiên Data Governance, Guardrails và các mô hình bảo mật Private trước khi đưa hệ thống vào môi trường Production.
-- Vận dụng tư duy Agentic Platform và Multi-Agent để hỗ trợ giám sát hệ thống, điều tra sự cố cũng như tối ưu chi phí vận hành trong các dự án sử dụng AWS.
-
-![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)
+![1784690143648](image/_index.vi/1784690143648.png)

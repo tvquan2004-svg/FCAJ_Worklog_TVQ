@@ -10,92 +10,76 @@ pre: " <b> 4.2. </b> "
 
 | Info        | Details                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------ |
-| Date        | 27/06/2026                                                                                 |
+| Date        | 30/05/2026                                                                                 |
 | Location | 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City |
 | Role        | Attendee                                                                                |
 
 ## 4.2.1 Purpose of the Event
 
-The sharing session focused on introducing AI application solutions in the enterprise environment, particularly in infrastructure operations, cloud system optimization, and data security. The content also covered practical AI deployment models on AWS to improve operational efficiency and process automation.
+The sharing session covered various topics aimed at providing attendees with practical learning methods, hands-on experiences from hackathons and real projects, as well as mindset and soft skills for studying and working in the IT field.
 
 ## 4.2.2 Speaker List
 
-* **Mr. Steve Tran (Cloud Thinker):** Topic *Cloud Infrastructure Operations in the Age of Agentic Platform*.
-* **Mr. Hieu Nghi & Mr. Kiet & Mr. Trung:** Topic *Building a Voice AI Assistant for Enterprises*.
-* **Ms. Bao & Mr. Nguyen Nguyen (Cloud Kinetics):** Topic *Deploying DevOps AI Agent on AWS*.
-* **Mr. Truong & Ms. Minh Anh (Noventic):** Topic *Automating HR Processes with Amazon Q*.
-* **Mr. Toan Nguyen & Mr. Hieu Nghi (Renova Cloud):** Topic *Private Security Model for Amazon Q and MCP Server*.
+* **Mr. Hoang Thai Linh** – Topic: *Learning AWS through Cloud Quest and Floci*.
+* **Mr. Nguyen Tran Minh Quan, Mr. An Khuong Huynh & Mr. Quoc Anh Mai** – Topic: *Experience from LotusHacks 2026*.
+* **Ms. Nguyen Thi Quynh Nhu** – Topic: *Confidence in Learning and Work*.
+* **Mr. Tran Nghia** – Topic: *Tu Vi Dai Viet Application and Migration to AWS*.
+* **Mr. Tran Minh Quan** – Topic: *DevOps and Hidden Issues in Projects*.
+* **Mr. Pham Khac Uy** – Topic: *Understanding Procrastination*.
 
 ## 4.2.3 Notable Content
 
-### Cloud Infrastructure Operations in the Age of Agentic Platform
+### Learning AWS through Cloud Quest and Floci
 
-The presentation introduced the **Agentic Platform** model aimed at supporting smarter system operations through AI. This platform focuses on solving four common problems: incident investigation, code review, infrastructure cost optimization (FinOps), and security enhancement.
+The speaker introduced a practical approach to learning AWS using **AWS Cloud Quest** – a 3D role-playing game that helps learners build AWS infrastructure through real-world scenarios, and **Floci** – a tool that supports learning by providing hands-on AWS environments while minimizing the risk of unexpected costs.
 
-The speaker also compared two AI Agent deployment models:
+This approach helps beginners access AWS more easily through visual, interactive exercises without worrying about complex configurations or incurring unnecessary expenses.
 
-* **Single Agent** can effectively handle most tasks if provided with sufficient context and workflow.
-* **Multi-Agent** divides work among multiple specialized agents to optimize processing capability, context management, and clearer permission segregation.
+### Experience from LotusHacks 2026
 
-This approach helps engineering teams reduce analysis and incident response time in real-world operational environments.
+The team shared their journey participating in **LotusHacks 2026**, a prominent hackathon for university students. They presented the process of building projects such as **SynthHunter** and **Vortex**, from ideation to a Minimum Viable Product (MVP) within a very short timeframe.
 
-### Building a Voice AI Assistant for Enterprises
+Key takeaways included how to effectively divide tasks under time pressure, select appropriate technologies for rapid prototyping, and the importance of teamwork and clear communication during the hackathon.
 
-The next session presented the architecture for building a voice AI assistant using three main components:
+### Confidence in Learning and Work
 
-* **Speech-to-Text (STT)** converts speech into text.
-* **Large Language Model (LLM)** processes content and context.
-* **Text-to-Speech (TTS)** generates voice responses.
+The talk focused on building self-confidence in both academic and professional environments. The key message was that confidence is not the absence of fear, but the willingness to try despite feeling anxious.
 
-Using text as an intermediary layer makes it easier for enterprises to apply Guardrails for content control as well as integrate real-time API calling capabilities.
+The speaker encouraged attendees to step out of their comfort zones, embrace failure as a learning opportunity, and gradually build confidence through small achievements.
 
-In a Production environment, the system needs additional mechanisms such as Streaming to reduce latency, support for multiple voice regions, gender recognition, handling user interruptions, and call escalation to human agents when necessary.
+### Tu Vi Dai Viet Application and Migration to AWS
 
-### DevOps AI Agent on AWS
+The speaker shared the real-world journey of building the **Tu Vi Dai Viet** (Vietnamese Astrology) application and migrating its system to AWS. This session helped me understand more about:
 
-This topic introduced a solution using AI Agents to support DevOps processes, especially for automated incident investigation after system alerts from CloudWatch.
+* **Serverless architecture** and how it reduces operational overhead.
+* **Managed Services** on AWS that simplify infrastructure management.
+* **Cost optimization strategies** for startups, including using Lambda, API Gateway, and DynamoDB to minimize costs while maintaining scalability.
 
-The solution is built on six key components:
+### DevOps and Hidden Issues in Projects
 
-* Context Learning
-* Control
-* Integration
-* Collaboration
-* Convenient
-* Cost Effective
+The presentation emphasized that **DevOps is not just about tools** – it also involves people, processes, and teamwork. The speaker highlighted common hidden issues in projects such as:
 
-The processing workflow includes receiving alerts, classifying errors, performing Root Cause Analysis, proposing immediate remediation, and suggesting long-term improvements. The AI Agent only plays a supportive and advisory role, not directly making changes to the system.
+* Lack of clear communication between development and operations teams.
+* Siloed workflows that slow down delivery.
+* Over-reliance on automation without understanding the underlying processes.
 
-### Applying Amazon Q in HR Processes
+A successful DevOps culture requires a mindset shift across the entire team, not just the adoption of CI/CD pipelines or infrastructure-as-code tools.
 
-The session introduced Amazon Q as an internal AI assistant for enterprises with the ability to ensure higher data security compared to public AI platforms.
+### Understanding Procrastination
 
-Amazon Q can integrate with various systems such as Google Workspace, Microsoft Workspace, Jira, Salesforce, and GitHub via MCP.
+The final talk offered a fresh perspective on procrastination, showing that it is often not simply due to laziness. Instead, procrastination can stem from:
 
-In the recruitment process, the system can automatically:
+* **Fear of failure** – avoiding tasks to protect oneself from potential disappointment.
+* **Fear of judgment** – worrying about how others will evaluate the outcome.
+* **Lack of confidence** – doubting one's own ability to complete the task.
 
-* Analyze recruitment guideline documents.
-* Extract content from CVs, including OCR.
-* Evaluate and classify candidates.
-* Suggest salary levels and generate reports through no-code applications.
+The speaker suggested breaking tasks into smaller steps, setting realistic goals, and practicing self-compassion to overcome procrastination.
 
-### Private Security Model for Amazon Q and MCP Server
+## 4.2.4 Lessons Learned and Application Direction
 
-The final topic focused on the architecture for deploying Amazon Q in a Private environment to ensure information security.
-
-The solution is built on the **Zero Trust** principle, helping to mitigate risks such as DDoS or Man-in-the-Middle attacks.
-
-The proposed architecture includes:
-
-* Placing the MCP Server in a Private Subnet within the VPC.
-* Amazon Q accessing via Interface Endpoint and VPC Connection.
-* Encrypting traffic with TLS through Internal ALB combined with ACM and Amazon Cognito.
-* Using Route 53 Resolver to hide internal DNS from the Internet.
-
-## 4.2.4 Application to Work
-
-* View AI as a supporting tool to enhance work efficiency rather than completely replacing human roles.
-* When deploying AI in enterprises, prioritize Data Governance, Guardrails, and Private security models before putting the system into Production.
-* Apply the Agentic Platform and Multi-Agent mindset to support system monitoring, incident investigation, and operational cost optimization in projects using AWS.
-
-![](blob:https://www.facebook.com/ebfcc44c-603b-4bb2-a1ce-9575e430ad4c)![1784013303527](image/_index.vi/1784013303527.png)
+* Explore **AWS Cloud Quest** and **Floci** as practical tools for hands-on AWS learning without cost risks.
+* Apply lessons from LotusHacks 2026 when working on time-constrained projects: prioritize MVP features, divide tasks efficiently, and maintain clear communication.
+* Build confidence by taking action despite fear, starting with small achievable goals.
+* Study Serverless and Managed Services on AWS for cost-effective solutions, especially when building applications for startups.
+* Adopt DevOps as a culture involving people and processes, not just automation tools.
+* Recognize the root causes of procrastination and apply practical strategies to overcome them.

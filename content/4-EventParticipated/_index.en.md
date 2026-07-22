@@ -19,13 +19,23 @@ pre: " <b> 4. </b> "
 
 &emsp;**Event Name:** FCAJ Community Day
 
-&emsp;**Date:** 27/06/2026
+&emsp;**Date:** 30/05/2026
 
 &emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City
 
 &emsp;**Role:** Attendee
 
 ### [Event 3](4.3-Event3/)
+
+&emsp;**Event Name:** FCAJ Community Day
+
+&emsp;**Date:** 27/06/2026
+
+&emsp;**Location:** 26th Floor, Bitexco Building, 02 Hai Trieu, Ben Nghe Ward, District 1, Ho Chi Minh City
+
+&emsp;**Role:** Attendee
+
+### [Event 4](4.4-Event4/)
 
 &emsp;**Event Name:** FCAJ Community Day
 
