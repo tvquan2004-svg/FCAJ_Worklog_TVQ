@@ -29,4 +29,4 @@ pre: " <b> 5.10. </b> "
 
 Test với **50 users ảo** chạy song song trong **5 phút**, mỗi user thực hiện: Register → Login → [ Earn(100 coin) → Spend(random) ] loop
 
-**30% spend** dùng amount=999.999.999 — cố tình lớn hơn số dư để gây fail dẫn đến dlq
+**30% spend** dùng amount=999.999.999 — cố tình lớn hơn số dư để gây fail dẫn đến DLQ

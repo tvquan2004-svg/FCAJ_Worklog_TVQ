@@ -125,7 +125,7 @@ events:
 
 ![1783531973630](image/_index.vi/1783531973630.png)
 
-<div align="center"><i>Hình 5.7.3: Tạo message gửi vào queueTạo message gửi vào queue</i></div>
+<div align="center"><i>Hình 5.7.3: Tạo message gửi vào queue</i></div>
 
 ##### \* Xem retry trong logs consumer
 
@@ -180,7 +180,7 @@ Vì Visibility Timeout = 30 giây nên phải chờ đến 90 giây để Receiv
 
 ##### \* Kiểm tra DLQ
 
-![1783578421516](image/_index.vi/1783578421516.png)o
+![1783578421516](image/_index.vi/1783578421516.png)
 
 <div align="center"><i>Hình 5.7.8: message được gửi về DLQ.</i></div>
 
@@ -194,7 +194,7 @@ Tích hợp Amazon CloudWatch vào hệ thống SQS Consumer Lambdas để:
 
 ##### * Structured Logger
 
-```C#
+```ts
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 const LOG_LEVELS: Record<LogLevel, number> = {
@@ -243,7 +243,7 @@ Consumer Lambdas sử dụng logger này qua các method: logger.info(), logger.
 
 ##### * CloudWatch Custom Metrics
 
-```C#
+```ts
 import { CloudWatchClient, PutMetricDataCommand } from '@aws-sdk/client-cloudwatch';
 
 const client = new CloudWatchClient({
@@ -306,7 +306,7 @@ Metrics helper tại shared/src/cloudwatch/metrics.ts publish 3 metrics vào nam
 
 ##### * DLQ Alarm
 
-```C#
+```yaml
     EconomyDLQAlarm:
       Type: AWS::CloudWatch::Alarm
       Properties:
@@ -346,7 +346,7 @@ IAM roles cho CloudWatch đã được cấu hình trong workshop FIFO trước 
 
 ![1783684985187](image/_index.vi/1783684985187.png)
 
-<div align="center"><i>Hình 5.7.9: Tiến hành gửi massage lỗi gây ra DLQ.</i></div>
+<div align="center"><i>Hình 5.7.9: Tiến hành gửi message lỗi gây ra DLQ.</i></div>
 
 ![1783685032359](image/_index.vi/1783685032359.png)
 

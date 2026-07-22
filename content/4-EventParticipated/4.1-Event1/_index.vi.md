@@ -67,6 +67,6 @@ Buổi chia sẻ giới thiệu mô hình phân chia AI thành nhiều vai trò 
 * Dành thời gian củng cố kiến thức nền về hệ điều hành, mạng máy tính, cơ sở dữ liệu và thiết kế hệ thống nhằm giảm sự phụ thuộc vào AI.
 * Khi sử dụng AI trong phát triển phần mềm, nên phân chia rõ nhiệm vụ cho từng giai đoạn thay vì yêu cầu AI xử lý toàn bộ dự án trong một lần.
 
-## 4.4.5 Minh chứng tham gia sự kiện
+## 4.1.5 Minh chứng tham gia sự kiện
 
 ![1784690442041](image/_index.vi/1784690442041.jpg)

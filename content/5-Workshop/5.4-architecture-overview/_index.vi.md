@@ -7,7 +7,7 @@ pre : " <b> 5.4. </b> "
 ---
 #### 5.4.1 Tổng quan kiến trúc
 
-Kiến trúc hệ thống trước dự án trước khi triển khai:
+Kiến trúc hệ thống trước khi triển khai:
 
 ![1782935686221](image/_index.vi/1782935686221.png)
 

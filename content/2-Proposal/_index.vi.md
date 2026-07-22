@@ -41,7 +41,7 @@ Client (game app) gửi request qua API Gateway, request được định tuyế
 
 API Gateway đóng vai trò cổng duy nhất nhận request từ client, chịu trách nhiệm xác thực (JWT), rate limiting, và routing đến đúng Lambda. 6 Lambda API được triển khai độc lập, mỗi Lambda là một Express app được wrap bởi `@vendia/serverless-express`, chạy trên Node.js 20, xử lý một domain cụ thể của game. Các Lambda này scale độc lập dựa trên số request đến từng domain.
 
-5 SQS FIFO queue đảm bảo message được xử lý đúng thứ tự (FIFO) và không bị mất. Mỗi queue có DLQ (Dead Letter Queue) riêng để thu gom message thất bại sau 3 lần retry, kèm CloudWatch alarm để cảnh báo kịp thời. SQS Consumer Lambda xử lý message theo batch (tối đa 10 message/batch) với cơ chế partial failure (SGDBatchResponse).
+5 SQS FIFO queue đảm bảo message được xử lý đúng thứ tự (FIFO) và không bị mất. Mỗi queue có DLQ (Dead Letter Queue) riêng để thu gom message thất bại sau 3 lần retry, kèm CloudWatch alarm để cảnh báo kịp thời. SQS Consumer Lambda xử lý message theo batch (tối đa 10 message/batch) với cơ chế partial failure (SQSBatchResponse).
 
 Aurora RDS Serverless v2 PostgreSQL là database chính, tự động scale ACU theo tải, hỗ trợ IAM authentication cho bảo mật. TypeORM tự động tạo/cập nhật schema khi khởi động (synchronize: true). Có 18 entities chia làm 5 domain (User, Forum, GiftCode, Game, System).
 

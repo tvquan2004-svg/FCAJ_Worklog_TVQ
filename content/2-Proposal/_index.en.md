@@ -40,7 +40,7 @@ Client (game app) sends requests through API Gateway, which routes to the corres
 
 API Gateway serves as the single entry point receiving client requests, handling authentication (JWT), rate limiting, and routing to the correct Lambda. 6 Lambda APIs are deployed independently, each wrapping an Express app with `@vendia/serverless-express`, running on Node.js 20, handling a specific game domain. These Lambdas scale independently based on request volume per domain.
 
-5 SQS FIFO queues ensure messages are processed in order (FIFO) and not lost. Each queue has its own DLQ (Dead Letter Queue) to collect failed messages after 3 retries, with CloudWatch alarms for timely alerts. SQS Consumer Lambdas process messages in batches (max 10 messages/batch) with partial failure handling (SGDBatchResponse).
+5 SQS FIFO queues ensure messages are processed in order (FIFO) and not lost. Each queue has its own DLQ (Dead Letter Queue) to collect failed messages after 3 retries, with CloudWatch alarms for timely alerts. SQS Consumer Lambdas process messages in batches (max 10 messages/batch) with partial failure handling (SQSBatchResponse).
 
 Aurora RDS Serverless v2 PostgreSQL is the primary database, auto-scaling ACUs based on load, supporting IAM authentication for security. TypeORM auto-creates/updates schemas on startup (synchronize: true). There are 18 entities divided into 5 domains (User, Forum, GiftCode, Game, System).
 

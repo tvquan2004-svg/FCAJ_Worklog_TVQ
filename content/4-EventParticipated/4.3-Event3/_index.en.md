@@ -97,6 +97,6 @@ The proposed architecture includes:
 * When deploying AI in enterprises, prioritize Data Governance, Guardrails, and Private security models before putting the system into Production.
 * Apply the Agentic Platform and Multi-Agent mindset to support system monitoring, incident investigation, and operational cost optimization in projects using AWS.
 
-## 4.4.5 Event Attendance Evidence
+## 4.3.5 Event Attendance Evidence
 
 ![1784690550613](image/_index.en/1784690550613.jpg)

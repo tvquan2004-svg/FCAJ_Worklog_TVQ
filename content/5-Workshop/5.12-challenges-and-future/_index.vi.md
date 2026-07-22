@@ -9,7 +9,7 @@ pre: " <b> 5.12. </b> "
 
 * Thiết kế kiến trúc Serverless phù hợp giữa các dịch vụ AWS (API Gateway, Lambda, SQS, Aurora, Backup...) làm tăng độ phức tạp của kiến trúc hệ thống.
 * Quản lý quyền truy cập giữa các dịch vụ AWS (IAM Role, IAM Policy) khá phức tạp và dễ phát sinh lỗi `AccessDenied`.
-* Phải bảo tính nhất quán dữ liệu khi nhiều yêu cầu cập nhật đồng thời. Có nguy cơ xảy ra xung đột dữ liệu, ghi đè giao dịch hoặc mất tính chính xác của dữ liệu trong hệ thống game.
+* Phải đảm bảo tính nhất quán dữ liệu khi nhiều yêu cầu cập nhật đồng thời. Có nguy cơ xảy ra xung đột dữ liệu, ghi đè giao dịch hoặc mất tính chính xác của dữ liệu trong hệ thống game.
 * Theo dõi và xử lý lỗi trong môi trường Serverless gặp nhiều khó khăn do không có máy chủ cố định.
 
 #### 5.12.2 Hướng phát triển

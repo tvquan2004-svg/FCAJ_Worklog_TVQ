@@ -160,7 +160,7 @@ Giả định Lượng tải và Thông số Hệ thống
 * Amazon SQS: ~2,000,000 requests cần xử lý bất đồng bộ, phát sinh tổng cộng 6,000,000 tác vụ SQS. Tỷ lệ lỗi đẩy vào hàng đợi DLQ ước tính <0.1%.
 * Amazon S3: ~10 GB.
 * Amazon CloudWatch Logs: ~10 GB nạp và lưu trữ log/tháng.
-* Amazon Aurora PostgreSQL & RDS Proxy: trung bình ở chạy mức 2 ACU 24/7.
+* Amazon Aurora PostgreSQL & RDS Proxy: trung bình chạy ở mức 2 ACU 24/7.
 
 | Service Name                           |           Monthly Cost (USD)           | Annual Cost (USD) |
 | :------------------------------------- | :-------------------------------------: | :---------------: |

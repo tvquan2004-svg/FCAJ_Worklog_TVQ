@@ -17,7 +17,7 @@ pre : " <b> 5.6. </b> "
 
 <div align="center"><i>Hình 5.6.1:Kiến trúc hệ thống.</i></div>
 
-ví dụ với luồng xử lí POST /Economy/earn :
+ví dụ với luồng xử lý POST /Economy/earn :
 
 * Client gửi POST /Economy/earn.
 * API Gateway chuyển request đến Producer Lambda.
@@ -231,7 +231,7 @@ Stack tên gameapi-sqs-infrastructure-dev, sẽ tạo:
 
 <div align="center"><i>Hình 5.6.4: Deploy SQS thành công.</i></div>
 
-chú thích : các file dlq có trong queues sẽ được hướng dẫn setup và deploy ở phần 5.7 AWS SQS Dead Letter Queue
+chú thích : các file DLQ có trong queues sẽ được hướng dẫn setup và deploy ở phần 5.7 AWS SQS Dead Letter Queue
 
 ##### * Deploy consumer sqs
 

@@ -83,6 +83,6 @@ The speaker suggested breaking tasks into smaller steps, setting realistic goals
 * Adopt DevOps as a culture involving people and processes, not just automation tools.
 * Recognize the root causes of procrastination and apply practical strategies to overcome them.
 
-## 4.4.5 Event Attendance Evidence
+## 4.2.5 Event Attendance Evidence
 
 ![1784690593233](image/_index.en/1784690593233.png)

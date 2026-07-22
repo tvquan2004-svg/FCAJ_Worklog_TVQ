@@ -97,6 +97,6 @@ Kiến trúc được đề xuất bao gồm:
 - Khi triển khai AI trong doanh nghiệp cần ưu tiên Data Governance, Guardrails và các mô hình bảo mật Private trước khi đưa hệ thống vào môi trường Production.
 - Vận dụng tư duy Agentic Platform và Multi-Agent để hỗ trợ giám sát hệ thống, điều tra sự cố cũng như tối ưu chi phí vận hành trong các dự án sử dụng AWS.
 
-## 4.4.5 Minh chứng tham gia sự kiện
+## 4.3.5 Minh chứng tham gia sự kiện
 
 ![1784690540075](image/_index.vi/1784690540075.jpg)

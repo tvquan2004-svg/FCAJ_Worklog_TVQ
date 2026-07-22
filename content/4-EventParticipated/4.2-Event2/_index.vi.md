@@ -83,6 +83,6 @@ Diễn giả gợi ý chia nhỏ nhiệm vụ thành các bước nhỏ hơn, đ
 * Xem DevOps là văn hóa liên quan đến con người và quy trình, không chỉ là công cụ tự động hóa.
 * Nhận biết nguyên nhân gốc rễ của sự trì hoãn và áp dụng các chiến lược thực tế để vượt qua.
 
-## 4.4.5 Minh chứng tham gia sự kiện
+## 4.2.5 Minh chứng tham gia sự kiện
 
 ![1784690143648](image/_index.vi/1784690143648.png)

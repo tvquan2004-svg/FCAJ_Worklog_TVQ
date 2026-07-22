@@ -67,6 +67,6 @@ The session introduced a model that divides AI into different roles correspondin
 * Spend time strengthening foundational knowledge of operating systems, computer networking, databases, and system design to reduce dependence on AI.
 * When using AI in software development, clearly divide tasks for each stage instead of asking AI to handle the entire project at once.
 
-## 4.4.5 Event Attendance Evidence
+## 4.1.5 Event Attendance Evidence
 
 ![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![1784690449254](image/_index.en/1784690449254.jpg)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)![](blob:https://www.facebook.com/65150fbb-87fb-4593-8457-bd61a0a06a1c)
